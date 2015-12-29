@@ -38,7 +38,7 @@
             <property name="orientation">vertical</property>
             <property name="spacing">12</property>
             <child>
-              <object class="GtkGrid" id="grid2">
+              <object class="GtkTable" id="grid2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="valign">start</property>
@@ -644,7 +644,7 @@
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkButtonBox" id="dialog-action_area1">
+          <object class="GtkHButtonBox" id="dialog-action_area1">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -1093,7 +1093,7 @@
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkButtonBox" id="dialog-action_area3">
+          <object class="GtkHButtonBox" id="dialog-action_area3">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -1139,7 +1139,7 @@
             <property name="orientation">vertical</property>
             <property name="spacing">6</property>
             <child>
-              <object class="GtkGrid" id="grid1">
+              <object class="GtkTable" id="grid1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="row_spacing">6</property>

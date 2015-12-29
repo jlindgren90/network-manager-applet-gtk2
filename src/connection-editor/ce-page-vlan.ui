@@ -213,7 +213,7 @@
       </packing>
     </child>
     <child>
-      <object class="GtkGrid" id="grid1">
+      <object class="GtkTable" id="grid1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="resize_mode">immediate</property>
