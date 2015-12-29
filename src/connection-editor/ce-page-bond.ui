@@ -91,6 +91,7 @@
       </object>
       <packing>
         <property name="top_attach">1</property>
+        <property name="right_attach">2</property>
       </packing>
     </child>
     <child>
@@ -222,6 +223,7 @@
       </object>
       <packing>
         <property name="top_attach">2</property>
+        <property name="right_attach">2</property>
       </packing>
     </child>
     <child>
