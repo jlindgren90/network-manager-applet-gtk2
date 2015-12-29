@@ -758,9 +758,9 @@ static void
 menu_item_draw_generic (GtkWidget *widget, cairo_t *cr)
 {
 	GtkWidget *label;
-//	PangoFontDescription *desc;
+	PangoFontDescription *desc;
 	PangoLayout *layout;
-//	GtkStyleContext *style;
+	GtkStyle *style;
 	int width = 0, height = 0, owidth, oheight;
 	gdouble extraheight = 0, extrawidth = 0;
 	const char *text;
@@ -772,15 +772,11 @@ menu_item_draw_generic (GtkWidget *widget, cairo_t *cr)
 	text = gtk_label_get_text (GTK_LABEL (label));
 
 	layout = pango_cairo_create_layout (cr);
-#if 0
-	style = gtk_widget_get_style_context (widget);
-	gtk_style_context_get (style, gtk_style_context_get_state (style),
-	                       "font", &desc,
-	                       NULL);
+	style = gtk_widget_get_style (widget);
+	desc = pango_font_description_copy (style->font_desc);
 	pango_font_description_set_variant (desc, PANGO_VARIANT_SMALL_CAPS);
 	pango_font_description_set_weight (desc, PANGO_WEIGHT_SEMIBOLD);
 	pango_layout_set_font_description (layout, desc);
-#endif
 	pango_layout_set_text (layout, text, -1);
 	pango_cairo_update_layout (cr, layout);
 	pango_layout_get_size (layout, &owidth, &oheight);
@@ -803,16 +799,37 @@ menu_item_draw_generic (GtkWidget *widget, cairo_t *cr)
 
 	cairo_restore(cr);
 
-//	pango_font_description_free (desc);
+	pango_font_description_free (desc);
 	g_object_unref (layout);
 
 	gtk_widget_set_size_request (widget, width + 2 * xpadding, height + ypadding + postpadding);
 }
 
 static gboolean
-menu_title_item_draw (GtkWidget *widget, cairo_t *cr, gpointer user_data)
+menu_title_item_expose (GtkWidget *widget, GdkEventExpose *event)
 {
+	GtkAllocation allocation;
+	cairo_t *cr;
+
+	cr = gdk_cairo_create (gtk_widget_get_window (widget));
+
+	/* The drawing area we get is the whole menu; clip the drawing to the
+	 * event area, which should just be our menu item.
+	 */
+	cairo_rectangle (cr,
+	                 event->area.x, event->area.y,
+	                 event->area.width, event->area.height);
+	cairo_clip (cr);
+
+	/* We also need to reposition the cairo context so that (0, 0) is the
+	 * top-left of where we're supposed to start drawing.
+	 */
+	gtk_widget_get_allocation (widget, &allocation);
+	cairo_translate (cr, allocation.x, allocation.y);
+
 	menu_item_draw_generic (widget, cr);
+
+	cairo_destroy (cr);
 	return TRUE;
 }
 
@@ -825,7 +842,7 @@ applet_menu_item_create_device_item_helper (NMDevice *device,
 
 	item = gtk_menu_item_new_with_label (text);
 	gtk_widget_set_sensitive (item, FALSE);
-	g_signal_connect (item, "draw", G_CALLBACK (menu_title_item_draw), NULL);
+	g_signal_connect (item, "expose-event", G_CALLBACK (menu_title_item_expose), NULL);
 	return item;
 }
 
