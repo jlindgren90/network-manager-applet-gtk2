@@ -44,6 +44,8 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 
+#include "../gtk-compat.h"
+
 #include "applet-dialogs.h"
 #include "utils.h"
 
@@ -196,7 +198,7 @@ create_info_label (const char *text, gboolean selectable)
 	label = gtk_label_new (text ? text : "");
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.0);
 	gtk_label_set_selectable (GTK_LABEL (label), selectable);
-	gtk_widget_set_hexpand (label, selectable);
+//	gtk_widget_set_hexpand (label, selectable);
 	return label;
 }
 

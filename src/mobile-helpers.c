@@ -31,6 +31,8 @@
 #include "mobile-helpers.h"
 #include "applet-dialogs.h"
 
+#include "../gtk-compat.h"
+
 GdkPixbuf *
 mobile_helper_get_status_pixbuf (guint32 quality,
                                  gboolean quality_valid,

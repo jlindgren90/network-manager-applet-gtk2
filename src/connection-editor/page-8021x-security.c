@@ -27,6 +27,8 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 
+#include "../../gtk-compat.h"
+
 #include <NetworkManager.h>
 #include <nm-setting-connection.h>
 #include <nm-setting-wired.h>

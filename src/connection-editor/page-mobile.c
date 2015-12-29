@@ -27,6 +27,8 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 
+#include "../../gtk-compat.h"
+
 #include <nm-glib-compat.h>
 #include <nm-setting-connection.h>
 #include <nm-setting-gsm.h>

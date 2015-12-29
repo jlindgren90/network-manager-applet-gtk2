@@ -27,6 +27,8 @@
 #include <glib/gi18n-lib.h>
 #include <gtk/gtk.h>
 
+#include "../../gtk-compat.h"
+
 #include "nm-vpn-password-dialog.h"
 
 G_DEFINE_TYPE (NMAVpnPasswordDialog, nma_vpn_password_dialog, GTK_TYPE_DIALOG)

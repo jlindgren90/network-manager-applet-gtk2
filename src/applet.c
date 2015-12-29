@@ -40,6 +40,8 @@
 #include <sys/socket.h>
 #include <stdlib.h>
 
+#include "../gtk-compat.h"
+
 #include <gio/gio.h>
 #include <dbus/dbus-glib.h>
 #include <dbus/dbus-glib-lowlevel.h>
@@ -756,9 +758,9 @@ static void
 menu_item_draw_generic (GtkWidget *widget, cairo_t *cr)
 {
 	GtkWidget *label;
-	PangoFontDescription *desc;
+//	PangoFontDescription *desc;
 	PangoLayout *layout;
-	GtkStyleContext *style;
+//	GtkStyleContext *style;
 	int width = 0, height = 0, owidth, oheight;
 	gdouble extraheight = 0, extrawidth = 0;
 	const char *text;
@@ -770,6 +772,7 @@ menu_item_draw_generic (GtkWidget *widget, cairo_t *cr)
 	text = gtk_label_get_text (GTK_LABEL (label));
 
 	layout = pango_cairo_create_layout (cr);
+#if 0
 	style = gtk_widget_get_style_context (widget);
 	gtk_style_context_get (style, gtk_style_context_get_state (style),
 	                       "font", &desc,
@@ -777,6 +780,7 @@ menu_item_draw_generic (GtkWidget *widget, cairo_t *cr)
 	pango_font_description_set_variant (desc, PANGO_VARIANT_SMALL_CAPS);
 	pango_font_description_set_weight (desc, PANGO_WEIGHT_SEMIBOLD);
 	pango_layout_set_font_description (layout, desc);
+#endif
 	pango_layout_set_text (layout, text, -1);
 	pango_cairo_update_layout (cr, layout);
 	pango_layout_get_size (layout, &owidth, &oheight);
@@ -799,7 +803,7 @@ menu_item_draw_generic (GtkWidget *widget, cairo_t *cr)
 
 	cairo_restore(cr);
 
-	pango_font_description_free (desc);
+//	pango_font_description_free (desc);
 	g_object_unref (layout);
 
 	gtk_widget_set_size_request (widget, width + 2 * xpadding, height + ypadding + postpadding);

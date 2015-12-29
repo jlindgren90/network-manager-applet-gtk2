@@ -33,6 +33,7 @@
 #include "ap-menu-item.h"
 #include "nm-access-point.h"
 
+#include "../gtk-compat.h"
 
 G_DEFINE_TYPE (NMNetworkMenuItem, nm_network_menu_item, GTK_TYPE_IMAGE_MENU_ITEM);
 

@@ -29,6 +29,8 @@
 
 #include <gtk/gtk.h>
 
+#include "../../gtk-compat.h"
+
 #include <NetworkManager.h>
 #include <nm-setting-gsm.h>
 #include <nm-setting-cdma.h>
@@ -106,6 +108,9 @@ struct NMAMobileWizard {
 	GtkWidget *confirm_device_label;
 	guint32 confirm_idx;
 };
+
+static gint
+forward_func (gint current_page, gpointer user_data);
 
 static void
 assistant_closed (GtkButton *button, gpointer user_data)
@@ -773,7 +778,7 @@ providers_setup (NMAMobileWizard *self)
 	g_signal_connect_swapped (self->provider_unlisted_entry, "changed", G_CALLBACK (providers_update_complete), self);
 
 	alignment = gtk_alignment_new (0, 0.5, 0.66, 0);
-	gtk_widget_set_hexpand (alignment, TRUE);
+//	gtk_widget_set_hexpand (alignment, TRUE);
 	gtk_container_add (GTK_CONTAINER (alignment), self->provider_unlisted_entry);
 	gtk_grid_attach (GTK_GRID (unlisted_grid), alignment,
 	                 1, 0, 1, 1);
@@ -998,11 +1003,16 @@ country_update_complete (NMAMobileWizard *self)
 static void
 country_update_continue (NMAMobileWizard *self)
 {
+	int page;
+
 	gtk_assistant_set_page_complete (GTK_ASSISTANT (self->assistant),
 	                                 self->country_page,
 	                                 TRUE);
 
-	gtk_assistant_next_page (GTK_ASSISTANT (self->assistant));
+//	gtk_assistant_next_page (GTK_ASSISTANT (self->assistant));
+	page = gtk_assistant_get_current_page (GTK_ASSISTANT (self->assistant));
+	gtk_assistant_set_current_page (GTK_ASSISTANT (self->assistant),
+	                                forward_func (page, self));
 }
 
 static gint

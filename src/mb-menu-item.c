@@ -31,6 +31,8 @@
 
 #include "mb-menu-item.h"
 
+#include "../gtk-compat.h"
+
 G_DEFINE_TYPE (NMMbMenuItem, nm_mb_menu_item, GTK_TYPE_IMAGE_MENU_ITEM);
 
 #define NM_MB_MENU_ITEM_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), NM_TYPE_MB_MENU_ITEM, NMMbMenuItemPrivate))
