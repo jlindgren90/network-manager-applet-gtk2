@@ -31,7 +31,7 @@
         <property name="valign">start</property>
         <property name="left_padding">6</property>
         <child>
-          <object class="GtkBox" id="dcb_box">
+          <object class="GtkVBox" id="dcb_box">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="valign">start</property>
@@ -635,7 +635,7 @@
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
     <child internal-child="vbox">
-      <object class="GtkBox" id="dialog-vbox1">
+      <object class="GtkVBox" id="dialog-vbox1">
         <property name="can_focus">False</property>
         <property name="margin_left">6</property>
         <property name="margin_right">6</property>
@@ -684,7 +684,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkBox" id="box1">
+          <object class="GtkVBox" id="box1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="orientation">vertical</property>
@@ -707,7 +707,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkBox" id="box2">
+              <object class="GtkHBox" id="box2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="spacing">6</property>
@@ -724,7 +724,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box">
+                  <object class="GtkHBox" id="prio1_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -765,7 +765,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio2_box">
+                  <object class="GtkHBox" id="prio2_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -806,7 +806,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio_box">
+                  <object class="GtkHBox" id="prio_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -847,7 +847,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio3_box">
+                  <object class="GtkHBox" id="prio3_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -888,7 +888,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio4_box">
+                  <object class="GtkHBox" id="prio4_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -929,7 +929,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio5_box">
+                  <object class="GtkHBox" id="prio5_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -970,7 +970,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio6_box">
+                  <object class="GtkHBox" id="prio6_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1011,7 +1011,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio7_box">
+                  <object class="GtkHBox" id="prio7_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1084,7 +1084,7 @@
     <property name="skip_pager_hint">True</property>
     <property name="deletable">False</property>
     <child internal-child="vbox">
-      <object class="GtkBox" id="dialog-vbox3">
+      <object class="GtkVBox" id="dialog-vbox3">
         <property name="can_focus">False</property>
         <property name="margin_left">6</property>
         <property name="margin_right">6</property>
@@ -1133,7 +1133,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkBox" id="box3">
+          <object class="GtkVBox" id="box3">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="orientation">vertical</property>
@@ -1159,7 +1159,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box18">
+                  <object class="GtkHBox" id="prio1_box18">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1209,7 +1209,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box19">
+                  <object class="GtkHBox" id="prio1_box19">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1259,7 +1259,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box20">
+                  <object class="GtkHBox" id="prio1_box20">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1309,7 +1309,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box21">
+                  <object class="GtkHBox" id="prio1_box21">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1359,7 +1359,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box22">
+                  <object class="GtkHBox" id="prio1_box22">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1409,7 +1409,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box23">
+                  <object class="GtkHBox" id="prio1_box23">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1459,7 +1459,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box24">
+                  <object class="GtkHBox" id="prio1_box24">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1509,7 +1509,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box25">
+                  <object class="GtkHBox" id="prio1_box25">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1573,7 +1573,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio0_box2">
+                  <object class="GtkHBox" id="prio0_box2">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1615,7 +1615,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio0_box3">
+                  <object class="GtkHBox" id="prio0_box3">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1657,7 +1657,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio0_box4">
+                  <object class="GtkHBox" id="prio0_box4">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1699,7 +1699,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio0_box5">
+                  <object class="GtkHBox" id="prio0_box5">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1741,7 +1741,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio0_box6">
+                  <object class="GtkHBox" id="prio0_box6">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1783,7 +1783,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio0_box7">
+                  <object class="GtkHBox" id="prio0_box7">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1825,7 +1825,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio0_box8">
+                  <object class="GtkHBox" id="prio0_box8">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1867,7 +1867,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio0_box9">
+                  <object class="GtkHBox" id="prio0_box9">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1923,7 +1923,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio0_box1">
+                  <object class="GtkHBox" id="prio0_box1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -1964,7 +1964,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box11">
+                  <object class="GtkHBox" id="prio1_box11">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2005,7 +2005,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box12">
+                  <object class="GtkHBox" id="prio1_box12">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2046,7 +2046,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box13">
+                  <object class="GtkHBox" id="prio1_box13">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2087,7 +2087,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box14">
+                  <object class="GtkHBox" id="prio1_box14">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2128,7 +2128,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box15">
+                  <object class="GtkHBox" id="prio1_box15">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2169,7 +2169,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box16">
+                  <object class="GtkHBox" id="prio1_box16">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2210,7 +2210,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box17">
+                  <object class="GtkHBox" id="prio1_box17">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2265,7 +2265,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio0_box">
+                  <object class="GtkHBox" id="prio0_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2306,7 +2306,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box3">
+                  <object class="GtkHBox" id="prio1_box3">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2347,7 +2347,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box4">
+                  <object class="GtkHBox" id="prio1_box4">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2388,7 +2388,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box5">
+                  <object class="GtkHBox" id="prio1_box5">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2429,7 +2429,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box6">
+                  <object class="GtkHBox" id="prio1_box6">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2470,7 +2470,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box7">
+                  <object class="GtkHBox" id="prio1_box7">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2511,7 +2511,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box9">
+                  <object class="GtkHBox" id="prio1_box9">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2552,7 +2552,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box1">
+                  <object class="GtkHBox" id="prio1_box1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2607,7 +2607,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio1_box8">
+                  <object class="GtkHBox" id="prio1_box8">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2658,7 +2658,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio2_box1">
+                  <object class="GtkHBox" id="prio2_box1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2709,7 +2709,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio_box1">
+                  <object class="GtkHBox" id="prio_box1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2760,7 +2760,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio3_box1">
+                  <object class="GtkHBox" id="prio3_box1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2811,7 +2811,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio4_box1">
+                  <object class="GtkHBox" id="prio4_box1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2862,7 +2862,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio5_box1">
+                  <object class="GtkHBox" id="prio5_box1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2913,7 +2913,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio6_box1">
+                  <object class="GtkHBox" id="prio6_box1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
@@ -2964,7 +2964,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="prio7_box1">
+                  <object class="GtkHBox" id="prio7_box1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">3</property>
