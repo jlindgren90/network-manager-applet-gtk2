@@ -466,7 +466,6 @@ get_config_widgets (const char *bdaddr, const char **uuids)
 
 	/* Status label */
 	info->status = gtk_label_new (nma_bt_device_get_status (device));
-	gtk_label_set_max_width_chars (GTK_LABEL (info->status), 80);
 	gtk_label_set_line_wrap (GTK_LABEL (info->status), TRUE);
 	gtk_box_pack_start (GTK_BOX (hbox), info->status, FALSE, TRUE, 6);
 
