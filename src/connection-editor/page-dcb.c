@@ -110,7 +110,7 @@ uint_entries_validate (GtkBuilder *builder, const char *fmt, gint max, gboolean 
 	const char *text;
 	guint i, total = 0;
 	gboolean valid = TRUE;
-//	GdkRGBA bgcolor;
+	GdkColor bgcolor;
 
 	for (i = 0; i < 8; i++) {
 		tmp = g_strdup_printf (fmt, i);
@@ -124,11 +124,11 @@ uint_entries_validate (GtkBuilder *builder, const char *fmt, gint max, gboolean 
 			num = strtol (text, NULL, 10);
 			if (errno || num < 0 || num > max) {
 				/* FIXME: only sets highlight color? */
-//				gdk_rgba_parse (&bgcolor, "red3");
-//				gtk_widget_override_background_color (GTK_WIDGET (entry), GTK_STATE_FLAG_NORMAL, &bgcolor);
+				gdk_color_parse ("red3", &bgcolor);
+				gtk_widget_modify_base (GTK_WIDGET (entry), GTK_STATE_NORMAL, &bgcolor);
 				valid = FALSE;
-			} //else
-//				gtk_widget_override_background_color (GTK_WIDGET (entry), GTK_STATE_FLAG_NORMAL, NULL);
+			} else
+				gtk_widget_modify_base (GTK_WIDGET (entry), GTK_STATE_NORMAL, NULL);
 
 			total += (guint) num;
 		}
