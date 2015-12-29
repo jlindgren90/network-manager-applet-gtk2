@@ -32,6 +32,7 @@
       <packing>
         <property name="right_attach">2</property>
         <property name="top_attach">2</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
@@ -46,6 +47,7 @@
       <packing>
         <property name="right_attach">2</property>
         <property name="top_attach">4</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
@@ -76,6 +78,7 @@
       <packing>
         <property name="right_attach">2</property>
         <property name="top_attach">6</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
@@ -183,6 +186,9 @@
         <property name="use_underline">True</property>
         <property name="mnemonic_widget">master_interface</property>
       </object>
+      <packing>
+        <property name="y_options">GTK_FILL</property>
+      </packing>
     </child>
     <child>
       <object class="GtkEntry" id="master_interface">
@@ -196,22 +202,8 @@
       </object>
       <packing>
         <property name="left_attach">1</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
-    </child>
-    <child>
-      <placeholder/>
-    </child>
-    <child>
-      <placeholder/>
-    </child>
-    <child>
-      <placeholder/>
-    </child>
-    <child>
-      <placeholder/>
-    </child>
-    <child>
-      <placeholder/>
     </child>
     <child>
       <object class="GtkLabel" id="team_mtu_label">
@@ -224,6 +216,7 @@
       </object>
       <packing>
         <property name="top_attach">1</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
@@ -265,6 +258,7 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">1</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
   </object>
