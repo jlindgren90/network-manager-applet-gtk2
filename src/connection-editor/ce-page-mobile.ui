@@ -91,8 +91,8 @@
                   <object class="GtkEntry" id="mobile_number">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="primary_icon_activatable">False</property>
-                    <property name="secondary_icon_activatable">False</property>
+                    <property name="primary_icon_activatable">True</property>
+                    <property name="secondary_icon_activatable">True</property>
                     <property name="primary_icon_sensitive">True</property>
                     <property name="secondary_icon_sensitive">True</property>
                   </object>
@@ -106,8 +106,8 @@
                   <object class="GtkEntry" id="mobile_username">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="primary_icon_activatable">False</property>
-                    <property name="secondary_icon_activatable">False</property>
+                    <property name="primary_icon_activatable">True</property>
+                    <property name="secondary_icon_activatable">True</property>
                     <property name="primary_icon_sensitive">True</property>
                     <property name="secondary_icon_sensitive">True</property>
                   </object>
@@ -124,8 +124,8 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="visibility">False</property>
-                    <property name="primary_icon_activatable">False</property>
-                    <property name="secondary_icon_activatable">False</property>
+                    <property name="primary_icon_activatable">True</property>
+                    <property name="secondary_icon_activatable">True</property>
                     <property name="primary_icon_sensitive">True</property>
                     <property name="secondary_icon_sensitive">True</property>
                   </object>
@@ -224,8 +224,8 @@
                   <object class="GtkEntry" id="mobile_network_id">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="primary_icon_activatable">False</property>
-                    <property name="secondary_icon_activatable">False</property>
+                    <property name="primary_icon_activatable">True</property>
+                    <property name="secondary_icon_activatable">True</property>
                     <property name="primary_icon_sensitive">True</property>
                     <property name="secondary_icon_sensitive">True</property>
                   </object>
@@ -247,8 +247,8 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="invisible_char">●</property>
-                        <property name="primary_icon_activatable">False</property>
-                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_activatable">True</property>
+                        <property name="secondary_icon_activatable">True</property>
                         <property name="primary_icon_sensitive">True</property>
                         <property name="secondary_icon_sensitive">True</property>
                       </object>
@@ -300,8 +300,8 @@
                     <property name="can_focus">True</property>
                     <property name="visibility">False</property>
                     <property name="invisible_char">●</property>
-                    <property name="primary_icon_activatable">False</property>
-                    <property name="secondary_icon_activatable">False</property>
+                    <property name="primary_icon_activatable">True</property>
+                    <property name="secondary_icon_activatable">True</property>
                     <property name="primary_icon_sensitive">True</property>
                     <property name="secondary_icon_sensitive">True</property>
                   </object>

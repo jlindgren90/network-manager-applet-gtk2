@@ -54,8 +54,8 @@
             <property name="can_focus">True</property>
             <property name="visibility">False</property>
             <property name="activates_default">True</property>
-            <property name="primary_icon_activatable">False</property>
-            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_activatable">True</property>
+            <property name="secondary_icon_activatable">True</property>
             <property name="primary_icon_sensitive">True</property>
             <property name="secondary_icon_sensitive">True</property>
           </object>
@@ -91,8 +91,8 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="activates_default">True</property>
-            <property name="primary_icon_activatable">False</property>
-            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_activatable">True</property>
+            <property name="secondary_icon_activatable">True</property>
             <property name="primary_icon_sensitive">True</property>
             <property name="secondary_icon_sensitive">True</property>
           </object>

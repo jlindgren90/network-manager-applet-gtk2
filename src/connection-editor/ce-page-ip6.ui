@@ -215,8 +215,8 @@
                         <property name="can_focus">True</property>
                         <property name="tooltip_text" translatable="yes">Domains used when resolving host names. Use commas to separate multiple domains.</property>
                         <property name="invisible_char">●</property>
-                        <property name="primary_icon_activatable">False</property>
-                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_activatable">True</property>
+                        <property name="secondary_icon_activatable">True</property>
                         <property name="primary_icon_sensitive">True</property>
                         <property name="secondary_icon_sensitive">True</property>
                       </object>
@@ -264,8 +264,8 @@
                         <property name="can_focus">True</property>
                         <property name="tooltip_text" translatable="yes">IP addresses of domain name servers used to resolve host names. Use commas to separate multiple domain name server addresses. Link-local addresses will be automatically scoped to the connecting interface.</property>
                         <property name="invisible_char">●</property>
-                        <property name="primary_icon_activatable">False</property>
-                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_activatable">True</property>
+                        <property name="secondary_icon_activatable">True</property>
                         <property name="primary_icon_sensitive">True</property>
                         <property name="secondary_icon_sensitive">True</property>
                       </object>
