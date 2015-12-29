@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkAdjustment" id="adjustment2">
     <property name="upper">10000</property>
     <property name="step_increment">1</property>
@@ -29,7 +30,7 @@
       </object>
       <packing>
         <property name="x_options">GTK_FILL</property>
-        <property name="y_options"></property>
+        <property name="y_options"/>
       </packing>
     </child>
     <child>
@@ -45,7 +46,7 @@
         <property name="top_attach">2</property>
         <property name="bottom_attach">3</property>
         <property name="x_options">GTK_FILL</property>
-        <property name="y_options"></property>
+        <property name="y_options"/>
       </packing>
     </child>
     <child>
@@ -61,7 +62,7 @@
         <property name="top_attach">3</property>
         <property name="bottom_attach">4</property>
         <property name="x_options">GTK_FILL</property>
-        <property name="y_options"></property>
+        <property name="y_options"/>
       </packing>
     </child>
     <child>
@@ -70,6 +71,10 @@
         <property name="can_focus">True</property>
         <property name="invisible_char">●</property>
         <property name="invisible_char_set">True</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
       </object>
       <packing>
         <property name="left_attach">1</property>
@@ -92,7 +97,7 @@
         <property name="top_attach">4</property>
         <property name="bottom_attach">5</property>
         <property name="x_options">GTK_FILL</property>
-        <property name="y_options"></property>
+        <property name="y_options"/>
       </packing>
     </child>
     <child>
@@ -106,6 +111,10 @@
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
             <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">adjustment2</property>
             <property name="climb_rate">1</property>
           </object>
@@ -174,6 +183,10 @@
         <property name="invisible_char">●</property>
         <property name="width_chars">4</property>
         <property name="invisible_char_set">True</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
         <property name="adjustment">vlan_id_adjustment</property>
         <property name="numeric">True</property>
       </object>
@@ -190,6 +203,10 @@
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <property name="invisible_char">●</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
       </object>
       <packing>
         <property name="left_attach">1</property>
@@ -203,7 +220,6 @@
       <object class="GtkLabel" id="vlan_flags_label">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="halign">start</property>
         <property name="label" translatable="yes">Flags:</property>
       </object>
       <packing>
@@ -224,14 +240,10 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
+            <property name="use_underline">True</property>
             <property name="xalign">0</property>
             <property name="draw_indicator">True</property>
-            <property name="use_underline">True</property>
           </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">0</property>
-          </packing>
         </child>
         <child>
           <object class="GtkCheckButton" id="gvrp_flag">
@@ -239,13 +251,12 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
+            <property name="use_underline">True</property>
             <property name="xalign">0</property>
             <property name="draw_indicator">True</property>
-            <property name="use_underline">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
-            <property name="top_attach">0</property>
           </packing>
         </child>
         <child>
@@ -254,13 +265,12 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
+            <property name="use_underline">True</property>
             <property name="xalign">0</property>
             <property name="draw_indicator">True</property>
-            <property name="use_underline">True</property>
           </object>
           <packing>
             <property name="left_attach">2</property>
-            <property name="top_attach">0</property>
           </packing>
         </child>
       </object>

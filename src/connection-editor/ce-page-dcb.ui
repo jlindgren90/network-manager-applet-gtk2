@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.16.1 -->
 <interface>
-  <requires lib="gtk+" version="3.0"/>
+  <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkTable" id="DcbPage">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -28,106 +28,76 @@
       <object class="GtkAlignment" id="alignment1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="valign">start</property>
         <property name="left_padding">6</property>
         <child>
           <object class="GtkVBox" id="dcb_box">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="valign">start</property>
-            <property name="orientation">vertical</property>
             <property name="spacing">12</property>
             <child>
               <object class="GtkTable" id="grid2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="valign">start</property>
-                <property name="row_spacing">6</property>
                 <property name="column_spacing">6</property>
+                <property name="row_spacing">6</property>
                 <child>
                   <object class="GtkLabel" id="label62">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">start</property>
                     <property name="label" translatable="yes">FCoE</property>
                     <property name="use_markup">True</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label63">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">start</property>
                     <property name="label" translatable="yes">iSCSI</property>
                     <property name="use_markup">True</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">2</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label64">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">start</property>
                     <property name="label" translatable="yes">FIP</property>
                     <property name="use_markup">True</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label65">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">start</property>
                     <property name="label" translatable="yes">Flow Control</property>
                     <property name="use_markup">True</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">4</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label66">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">start</property>
                     <property name="label" translatable="yes">Feature</property>
                     <attributes>
                       <attribute name="weight" value="bold"/>
                     </attributes>
                   </object>
-                  <packing>
-                    <property name="left_attach">0</property>
-                    <property name="top_attach">0</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
-                  </packing>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label67">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">center</property>
-                    <property name="margin_left">6</property>
-                    <property name="margin_right">6</property>
                     <property name="label" translatable="yes">Enable</property>
                     <attributes>
                       <attribute name="weight" value="bold"/>
@@ -135,18 +105,12 @@
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
-                    <property name="top_attach">0</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label68">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">center</property>
-                    <property name="margin_left">6</property>
-                    <property name="margin_right">6</property>
                     <property name="label" translatable="yes">Advertise</property>
                     <attributes>
                       <attribute name="weight" value="bold"/>
@@ -154,18 +118,12 @@
                   </object>
                   <packing>
                     <property name="left_attach">2</property>
-                    <property name="top_attach">0</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label69">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">center</property>
-                    <property name="margin_left">6</property>
-                    <property name="margin_right">6</property>
                     <property name="label" translatable="yes">Willing</property>
                     <attributes>
                       <attribute name="weight" value="bold"/>
@@ -173,17 +131,12 @@
                   </object>
                   <packing>
                     <property name="left_attach">3</property>
-                    <property name="top_attach">0</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label70">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">center</property>
-                    <property name="margin_right">16</property>
                     <property name="label" translatable="yes">Priority</property>
                     <attributes>
                       <attribute name="weight" value="bold"/>
@@ -191,25 +144,22 @@
                   </object>
                   <packing>
                     <property name="left_attach">4</property>
-                    <property name="top_attach">0</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkCheckButton" id="fcoe_advertise_checkbutton">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -217,15 +167,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -233,15 +180,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">2</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -249,15 +193,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">2</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -265,15 +206,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="top_attach">2</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -281,15 +219,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -297,15 +232,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -313,15 +245,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -329,15 +258,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">4</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -345,15 +271,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">4</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -361,15 +284,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="top_attach">4</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -377,15 +297,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -394,44 +311,43 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
-                    <property name="halign">center</property>
                   </object>
                   <packing>
                     <property name="left_attach">5</property>
                     <property name="top_attach">4</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label71">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">end</property>
                     <property name="label" translatable="yes">Priority Groups</property>
                     <property name="use_markup">True</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkCheckButton" id="pg_enable_checkbutton">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -439,15 +355,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -455,15 +368,12 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="halign">center</property>
                     <property name="xalign">0</property>
                     <property name="draw_indicator">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -472,118 +382,88 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
-                    <property name="halign">center</property>
                   </object>
                   <packing>
                     <property name="left_attach">5</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkComboBoxText" id="fcoe_priority_combo">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="margin_right">16</property>
-                    <property name="active_id">0</property>
                     <items>
-                      <item id="0" translatable="yes">default</item>
-                      <item id="1" translatable="yes">0</item>
-                      <item id="2" translatable="yes">1</item>
-                      <item id="3" translatable="yes">2</item>
-                      <item id="4" translatable="yes">3</item>
-                      <item id="5" translatable="yes">4</item>
-                      <item id="6" translatable="yes">5</item>
-                      <item id="7" translatable="yes">6</item>
-                      <item id="8" translatable="yes">7</item>
+                      <item translatable="yes">default</item>
+                      <item translatable="yes">0</item>
+                      <item translatable="yes">1</item>
+                      <item translatable="yes">2</item>
+                      <item translatable="yes">3</item>
+                      <item translatable="yes">4</item>
+                      <item translatable="yes">5</item>
+                      <item translatable="yes">6</item>
+                      <item translatable="yes">7</item>
                     </items>
                   </object>
                   <packing>
                     <property name="left_attach">4</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkComboBoxText" id="iscsi_priority_combo">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="margin_right">16</property>
-                    <property name="active_id">0</property>
                     <items>
-                      <item id="0" translatable="yes">default</item>
-                      <item id="1" translatable="yes">0</item>
-                      <item id="2" translatable="yes">1</item>
-                      <item id="3" translatable="yes">2</item>
-                      <item id="4" translatable="yes">3</item>
-                      <item id="5" translatable="yes">4</item>
-                      <item id="6" translatable="yes">5</item>
-                      <item id="7" translatable="yes">6</item>
-                      <item id="8" translatable="yes">7</item>
+                      <item translatable="yes">default</item>
+                      <item translatable="yes">0</item>
+                      <item translatable="yes">1</item>
+                      <item translatable="yes">2</item>
+                      <item translatable="yes">3</item>
+                      <item translatable="yes">4</item>
+                      <item translatable="yes">5</item>
+                      <item translatable="yes">6</item>
+                      <item translatable="yes">7</item>
                     </items>
                   </object>
                   <packing>
                     <property name="left_attach">4</property>
                     <property name="top_attach">2</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkComboBoxText" id="fip_priority_combo">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="margin_right">16</property>
-                    <property name="active_id">0</property>
                     <items>
-                      <item id="0" translatable="yes">default</item>
-                      <item id="1" translatable="yes">0</item>
-                      <item id="2" translatable="yes">1</item>
-                      <item id="3" translatable="yes">2</item>
-                      <item id="4" translatable="yes">3</item>
-                      <item id="5" translatable="yes">4</item>
-                      <item id="6" translatable="yes">5</item>
-                      <item id="7" translatable="yes">6</item>
-                      <item id="8" translatable="yes">7</item>
+                      <item translatable="yes">default</item>
+                      <item translatable="yes">0</item>
+                      <item translatable="yes">1</item>
+                      <item translatable="yes">2</item>
+                      <item translatable="yes">3</item>
+                      <item translatable="yes">4</item>
+                      <item translatable="yes">5</item>
+                      <item translatable="yes">6</item>
+                      <item translatable="yes">7</item>
                     </items>
                   </object>
                   <packing>
                     <property name="left_attach">4</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkComboBoxText" id="fcoe_mode_combo">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="active_id">0</property>
                     <items>
-                      <item id="0" translatable="yes">Fabric</item>
-                      <item id="1" translatable="yes">VN2VN</item>
+                      <item translatable="yes">Fabric</item>
+                      <item translatable="yes">VN2VN</item>
                     </items>
                   </object>
                   <packing>
                     <property name="left_attach">5</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
                 </child>
                 <child>
                   <placeholder/>
@@ -637,11 +517,6 @@
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox1">
         <property name="can_focus">False</property>
-        <property name="margin_left">6</property>
-        <property name="margin_right">6</property>
-        <property name="margin_top">6</property>
-        <property name="margin_bottom">6</property>
-        <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkHButtonBox" id="dialog-action_area1">
@@ -687,7 +562,6 @@
           <object class="GtkVBox" id="box1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
             <property name="spacing">6</property>
             <child>
               <object class="GtkLabel" id="label1">
@@ -1086,11 +960,6 @@
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox3">
         <property name="can_focus">False</property>
-        <property name="margin_left">6</property>
-        <property name="margin_right">6</property>
-        <property name="margin_top">6</property>
-        <property name="margin_bottom">6</property>
-        <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkHButtonBox" id="dialog-action_area3">
@@ -1136,14 +1005,13 @@
           <object class="GtkVBox" id="box3">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
             <property name="spacing">6</property>
             <child>
               <object class="GtkTable" id="grid1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="row_spacing">6</property>
                 <property name="column_spacing">12</property>
+                <property name="row_spacing">6</property>
                 <child>
                   <object class="GtkLabel" id="label54">
                     <property name="visible">True</property>
@@ -1152,10 +1020,7 @@
                     <property name="label" translatable="yes">Traffic Class:</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">9</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1182,7 +1047,6 @@
                       <object class="GtkComboBoxText" id="pg_up2tc0_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -1204,9 +1068,19 @@
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">9</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio1_box19">
@@ -1232,7 +1106,6 @@
                       <object class="GtkComboBoxText" id="pg_up2tc1_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -1254,9 +1127,19 @@
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">9</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio1_box20">
@@ -1282,7 +1165,6 @@
                       <object class="GtkComboBoxText" id="pg_up2tc2_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -1304,9 +1186,19 @@
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="top_attach">9</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio1_box21">
@@ -1332,7 +1224,6 @@
                       <object class="GtkComboBoxText" id="pg_up2tc3_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -1354,9 +1245,19 @@
                   <packing>
                     <property name="left_attach">4</property>
                     <property name="top_attach">9</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio1_box22">
@@ -1382,7 +1283,6 @@
                       <object class="GtkComboBoxText" id="pg_up2tc4_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -1404,9 +1304,19 @@
                   <packing>
                     <property name="left_attach">5</property>
                     <property name="top_attach">9</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio1_box23">
@@ -1432,7 +1342,6 @@
                       <object class="GtkComboBoxText" id="pg_up2tc5_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -1454,9 +1363,19 @@
                   <packing>
                     <property name="left_attach">6</property>
                     <property name="top_attach">9</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio1_box24">
@@ -1482,7 +1401,6 @@
                       <object class="GtkComboBoxText" id="pg_up2tc6_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -1504,9 +1422,19 @@
                   <packing>
                     <property name="left_attach">7</property>
                     <property name="top_attach">9</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio1_box25">
@@ -1532,7 +1460,6 @@
                       <object class="GtkComboBoxText" id="pg_up2tc7_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -1554,9 +1481,19 @@
                   <packing>
                     <property name="left_attach">8</property>
                     <property name="top_attach">9</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label44">
@@ -1566,10 +1503,7 @@
                     <property name="label" translatable="yes">Strict Bandwidth:</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">7</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1610,8 +1544,6 @@
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">7</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1652,8 +1584,6 @@
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">7</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1694,8 +1624,6 @@
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="top_attach">7</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1736,8 +1664,6 @@
                   <packing>
                     <property name="left_attach">4</property>
                     <property name="top_attach">7</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1778,8 +1704,6 @@
                   <packing>
                     <property name="left_attach">5</property>
                     <property name="top_attach">7</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1820,8 +1744,6 @@
                   <packing>
                     <property name="left_attach">6</property>
                     <property name="top_attach">7</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1862,8 +1784,6 @@
                   <packing>
                     <property name="left_attach">7</property>
                     <property name="top_attach">7</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1904,8 +1824,6 @@
                   <packing>
                     <property name="left_attach">8</property>
                     <property name="top_attach">7</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1916,10 +1834,7 @@
                     <property name="label" translatable="yes">Priority Bandwidth:</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1948,6 +1863,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -1959,8 +1878,6 @@
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1989,6 +1906,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2000,8 +1921,6 @@
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2030,6 +1949,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2041,8 +1964,6 @@
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2071,6 +1992,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2082,8 +2007,6 @@
                   <packing>
                     <property name="left_attach">4</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2112,6 +2035,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2123,8 +2050,6 @@
                   <packing>
                     <property name="left_attach">5</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2153,6 +2078,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2164,8 +2093,6 @@
                   <packing>
                     <property name="left_attach">6</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2194,6 +2121,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2205,8 +2136,6 @@
                   <packing>
                     <property name="left_attach">7</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2235,6 +2164,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2246,8 +2179,6 @@
                   <packing>
                     <property name="left_attach">8</property>
                     <property name="top_attach">5</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2258,10 +2189,7 @@
                     <property name="label" translatable="yes">Group Bandwidth:</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2290,6 +2218,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2301,8 +2233,6 @@
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2331,6 +2261,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2342,8 +2276,6 @@
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2372,6 +2304,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2383,8 +2319,6 @@
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2413,6 +2347,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2424,8 +2362,6 @@
                   <packing>
                     <property name="left_attach">4</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2454,6 +2390,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2465,8 +2405,6 @@
                   <packing>
                     <property name="left_attach">5</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2495,6 +2433,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2506,8 +2448,6 @@
                   <packing>
                     <property name="left_attach">6</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2536,6 +2476,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2547,8 +2491,6 @@
                   <packing>
                     <property name="left_attach">7</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2577,6 +2519,10 @@
                         <property name="can_focus">True</property>
                         <property name="max_length">3</property>
                         <property name="width_chars">3</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="secondary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">True</property>
+                        <property name="secondary_icon_sensitive">True</property>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -2588,8 +2534,6 @@
                   <packing>
                     <property name="left_attach">8</property>
                     <property name="top_attach">3</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2600,10 +2544,7 @@
                     <property name="label" translatable="yes">Group ID:</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -2630,7 +2571,6 @@
                       <object class="GtkComboBoxText" id="pg_pgid0_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -2653,9 +2593,10 @@
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio2_box1">
@@ -2681,7 +2622,6 @@
                       <object class="GtkComboBoxText" id="pg_pgid1_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -2704,9 +2644,10 @@
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio_box1">
@@ -2732,7 +2673,6 @@
                       <object class="GtkComboBoxText" id="pg_pgid2_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -2755,9 +2695,10 @@
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio3_box1">
@@ -2783,7 +2724,6 @@
                       <object class="GtkComboBoxText" id="pg_pgid3_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -2806,9 +2746,10 @@
                   <packing>
                     <property name="left_attach">4</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio4_box1">
@@ -2834,7 +2775,6 @@
                       <object class="GtkComboBoxText" id="pg_pgid4_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -2857,9 +2797,10 @@
                   <packing>
                     <property name="left_attach">5</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio5_box1">
@@ -2885,7 +2826,6 @@
                       <object class="GtkComboBoxText" id="pg_pgid5_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -2908,9 +2848,10 @@
                   <packing>
                     <property name="left_attach">6</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio6_box1">
@@ -2936,7 +2877,6 @@
                       <object class="GtkComboBoxText" id="pg_pgid6_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -2959,9 +2899,10 @@
                   <packing>
                     <property name="left_attach">7</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkHBox" id="prio7_box1">
@@ -2987,7 +2928,6 @@
                       <object class="GtkComboBoxText" id="pg_pgid7_combo">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="active_id">0</property>
                         <items>
                           <item translatable="yes">0</item>
                           <item translatable="yes">1</item>
@@ -3010,9 +2950,10 @@
                   <packing>
                     <property name="left_attach">8</property>
                     <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkAlignment" id="alignment2">
@@ -3031,12 +2972,6 @@
                       </object>
                     </child>
                   </object>
-                  <packing>
-                    <property name="left_attach">0</property>
-                    <property name="top_attach">0</property>
-                    <property name="width">9</property>
-                    <property name="height">1</property>
-                  </packing>
                 </child>
                 <child>
                   <object class="GtkAlignment" id="alignment3">
@@ -3057,10 +2992,7 @@
                     </child>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">2</property>
-                    <property name="width">9</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -3082,10 +3014,7 @@
                     </child>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">4</property>
-                    <property name="width">9</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -3107,10 +3036,7 @@
                     </child>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">6</property>
-                    <property name="width">9</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
                 <child>
@@ -3132,10 +3058,7 @@
                     </child>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
                     <property name="top_attach">8</property>
-                    <property name="width">9</property>
-                    <property name="height">1</property>
                   </packing>
                 </child>
               </object>

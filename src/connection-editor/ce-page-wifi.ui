@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkAdjustment" id="adjustment1">
     <property name="upper">10000</property>
     <property name="step_increment">1</property>
@@ -72,6 +73,10 @@
           <object class="GtkSpinButton" id="wifi_mtu">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">adjustment1</property>
             <property name="climb_rate">1</property>
           </object>
@@ -157,6 +162,10 @@
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <property name="tooltip_text" translatable="yes">The MAC address entered here will be used as hardware address for the network device this connection is activated on.  This feature is known as MAC cloning or spoofing.  Example: 00:11:22:33:44:55</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
       </object>
       <packing>
         <property name="left_attach">1</property>
@@ -191,6 +200,10 @@
           <object class="GtkSpinButton" id="wifi_tx_power">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">adjustment2</property>
             <property name="climb_rate">1</property>
           </object>
@@ -248,6 +261,10 @@
           <object class="GtkSpinButton" id="wifi_rate">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">adjustment3</property>
             <property name="climb_rate">1</property>
           </object>
@@ -314,6 +331,10 @@
       <object class="GtkEntry" id="wifi_ssid">
         <property name="visible">True</property>
         <property name="can_focus">True</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
       </object>
       <packing>
         <property name="left_attach">1</property>
@@ -340,6 +361,10 @@
       <object class="GtkSpinButton" id="wifi_channel">
         <property name="visible">True</property>
         <property name="can_focus">True</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
         <property name="adjustment">adjustment4</property>
         <property name="climb_rate">1</property>
       </object>

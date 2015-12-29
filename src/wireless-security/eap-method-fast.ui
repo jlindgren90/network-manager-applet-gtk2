@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkListStore" id="model8">
     <columns>
       <!-- column-name gchararray -->
@@ -61,6 +62,10 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="activates_default">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -157,7 +162,6 @@
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
             <property name="use_underline">True</property>
-            <property name="xalign">0.5</property>
             <property name="draw_indicator">True</property>
           </object>
           <packing>

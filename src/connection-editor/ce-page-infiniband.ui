@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkAdjustment" id="adjustment1">
     <property name="upper">65520</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
+  </object>
+  <object class="GtkListStore" id="infiniband_mode_model">
+    <columns>
+      <!-- column-name mode -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes" comments="IP-over-InfiniBand &quot;datagram mode&quot;">Datagram</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes" comments="IP-over-InfiniBand &quot;connected mode&quot;">Connected</col>
+      </row>
+    </data>
   </object>
   <object class="GtkTable" id="InfinibandPage">
     <property name="visible">True</property>
@@ -89,6 +104,10 @@
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
             <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">adjustment1</property>
             <property name="climb_rate">1</property>
           </object>
@@ -136,19 +155,5 @@
         <property name="y_options"/>
       </packing>
     </child>
-  </object>
-  <object class="GtkListStore" id="infiniband_mode_model">
-    <columns>
-      <!-- column-name mode -->
-      <column type="gchararray"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes" comments="IP-over-InfiniBand &quot;datagram mode&quot;">Datagram</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes" comments="IP-over-InfiniBand &quot;connected mode&quot;">Connected</col>
-      </row>
-    </data>
   </object>
 </interface>

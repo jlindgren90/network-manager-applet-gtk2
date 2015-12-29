@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
+  <object class="GtkAdjustment" id="bridge_port_path_cost_adjustment">
+    <property name="lower">1</property>
+    <property name="upper">65535</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="bridge_port_priority_adjustment">
+    <property name="upper">63</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">1</property>
+  </object>
   <object class="GtkTable" id="BridgePortPage">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -58,6 +70,10 @@
         <property name="can_focus">True</property>
         <property name="invisible_char">●</property>
         <property name="invisible_char_set">True</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
         <property name="adjustment">bridge_port_priority_adjustment</property>
         <property name="numeric">True</property>
       </object>
@@ -73,6 +89,10 @@
         <property name="can_focus">True</property>
         <property name="invisible_char">●</property>
         <property name="invisible_char_set">True</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
         <property name="adjustment">bridge_port_path_cost_adjustment</property>
         <property name="snap_to_ticks">True</property>
         <property name="numeric">True</property>
@@ -100,16 +120,5 @@
         <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
-  </object>
-  <object class="GtkAdjustment" id="bridge_port_path_cost_adjustment">
-    <property name="lower">1</property>
-    <property name="upper">65535</property>
-    <property name="step_increment">1</property>
-    <property name="page_increment">10</property>
-  </object>
-  <object class="GtkAdjustment" id="bridge_port_priority_adjustment">
-    <property name="upper">63</property>
-    <property name="step_increment">1</property>
-    <property name="page_increment">1</property>
   </object>
 </interface>

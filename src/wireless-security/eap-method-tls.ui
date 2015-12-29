@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkNotebook" id="eap_tls_notebook">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -10,7 +11,6 @@
       <object class="GtkTable" id="table8">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="valign">start</property>
         <property name="n_rows">6</property>
         <property name="n_columns">2</property>
         <property name="column_spacing">12</property>
@@ -37,6 +37,10 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="activates_default">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -161,6 +165,10 @@
             <property name="can_focus">True</property>
             <property name="visibility">False</property>
             <property name="activates_default">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -188,6 +196,9 @@
             <property name="x_options">GTK_FILL</property>
             <property name="y_options"/>
           </packing>
+        </child>
+        <child>
+          <placeholder/>
         </child>
         <child>
           <object class="GtkFileChooserButton" id="eap_tls_user_cert_button">

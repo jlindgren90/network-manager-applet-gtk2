@@ -11,10 +11,8 @@
     <property name="row_spacing">6</property>
     <child>
       <object class="GtkVBox" id="bluetooth_device_vbox">
-        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="valign">start</property>
         <property name="spacing">12</property>
         <child>
           <placeholder/>

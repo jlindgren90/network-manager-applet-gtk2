@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.15.4 on Wed Sep 25 12:38:16 2013 -->
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
-  <object class="GtkAdjustment" id="bond_mtu_adjustment">
-    <property name="upper">10000</property>
-    <property name="step_increment">1</property>
-    <property name="page_increment">10</property>
-  </object>
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkAdjustment" id="bond_downdelay_adjustment">
     <property name="upper">10000</property>
     <property name="step_increment">100</property>
@@ -62,6 +57,11 @@
       </row>
     </data>
   </object>
+  <object class="GtkAdjustment" id="bond_mtu_adjustment">
+    <property name="upper">10000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
   <object class="GtkAdjustment" id="bond_updelay_adjustment">
     <property name="upper">10000</property>
     <property name="step_increment">100</property>
@@ -79,8 +79,8 @@
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="border_width">12</property>
-    <property name="row_spacing">6</property>
     <property name="column_spacing">12</property>
+    <property name="row_spacing">6</property>
     <child>
       <object class="GtkLabel" id="master_connections_label">
         <property name="visible">True</property>
@@ -90,10 +90,7 @@
         <property name="use_underline">True</property>
       </object>
       <packing>
-        <property name="left_attach">0</property>
         <property name="top_attach">1</property>
-        <property name="width">2</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -106,10 +103,7 @@
         <property name="mnemonic_widget">bond_mode</property>
       </object>
       <packing>
-        <property name="left_attach">0</property>
         <property name="top_attach">3</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -127,9 +121,13 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">3</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
     </child>
     <child>
       <object class="GtkHBox" id="hbox2">
@@ -147,9 +145,6 @@
                 <property name="can_focus">True</property>
                 <property name="model">master_connections_model</property>
                 <property name="headers_visible">False</property>
-                <child internal-child="selection">
-                  <object class="GtkTreeSelection" id="treeview-selection1"/>
-                </child>
                 <child>
                   <object class="GtkTreeViewColumn" id="master_connection_name">
                     <child>
@@ -173,7 +168,6 @@
           <object class="GtkVButtonBox" id="buttonbox1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
             <property name="spacing">10</property>
             <property name="layout_style">start</property>
             <child>
@@ -227,10 +221,7 @@
         </child>
       </object>
       <packing>
-        <property name="left_attach">0</property>
         <property name="top_attach">2</property>
-        <property name="width">2</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -243,10 +234,7 @@
         <property name="mnemonic_widget">bond_frequency</property>
       </object>
       <packing>
-        <property name="left_attach">0</property>
         <property name="top_attach">6</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -259,6 +247,10 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">bond_frequency_adjustment</property>
             <property name="numeric">True</property>
           </object>
@@ -285,8 +277,6 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">6</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -298,24 +288,19 @@
         <property name="use_underline">True</property>
         <property name="mnemonic_widget">master_interface</property>
       </object>
-      <packing>
-        <property name="left_attach">0</property>
-        <property name="top_attach">0</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
-      </packing>
     </child>
     <child>
       <object class="GtkEntry" id="master_interface">
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <property name="invisible_char">●</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
       </object>
       <packing>
         <property name="left_attach">1</property>
-        <property name="top_attach">0</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -328,10 +313,7 @@
         <property name="mnemonic_widget">bond_monitoring</property>
       </object>
       <packing>
-        <property name="left_attach">0</property>
         <property name="top_attach">5</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -349,8 +331,6 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">5</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -363,10 +343,7 @@
         <property name="mnemonic_widget">bond_arp_targets</property>
       </object>
       <packing>
-        <property name="left_attach">0</property>
         <property name="top_attach">9</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -375,12 +352,14 @@
         <property name="can_focus">True</property>
         <property name="tooltip_text" translatable="yes">An IP address, or a comma-separated list of IP addresses, to look for when checking the link status.</property>
         <property name="invisible_char">●</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
       </object>
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">9</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -393,10 +372,7 @@
         <property name="mnemonic_widget">bond_updelay</property>
       </object>
       <packing>
-        <property name="left_attach">0</property>
         <property name="top_attach">7</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -409,10 +385,7 @@
         <property name="mnemonic_widget">bond_downdelay</property>
       </object>
       <packing>
-        <property name="left_attach">0</property>
         <property name="top_attach">8</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -425,6 +398,10 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">bond_updelay_adjustment</property>
             <property name="snap_to_ticks">True</property>
             <property name="numeric">True</property>
@@ -452,8 +429,6 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">7</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -466,6 +441,10 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">bond_downdelay_adjustment</property>
             <property name="snap_to_ticks">True</property>
             <property name="numeric">True</property>
@@ -493,8 +472,6 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">8</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -507,10 +484,7 @@
         <property name="mnemonic_widget">bond_primary</property>
       </object>
       <packing>
-        <property name="left_attach">0</property>
         <property name="top_attach">4</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -519,12 +493,14 @@
         <property name="can_focus">True</property>
         <property name="tooltip_text" translatable="yes">The interface name of the primary device. If set, this device will always be the active slave when it is available.</property>
         <property name="invisible_char">●</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
       </object>
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">4</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -537,10 +513,7 @@
         <property name="mnemonic_widget">bond_mtu</property>
       </object>
       <packing>
-        <property name="left_attach">0</property>
         <property name="top_attach">10</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
     <child>
@@ -552,6 +525,10 @@
           <object class="GtkSpinButton" id="bond_mtu">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">bond_mtu_adjustment</property>
             <property name="climb_rate">1</property>
           </object>
@@ -578,8 +555,6 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">10</property>
-        <property name="width">1</property>
-        <property name="height">1</property>
       </packing>
     </child>
   </object>

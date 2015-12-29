@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
+  <object class="GtkListStore" id="model3">
+    <columns>
+      <!-- column-name gchararray -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Open System</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Shared Key</col>
+      </row>
+    </data>
+  </object>
   <object class="GtkListStore" id="model4">
     <columns>
       <!-- column-name gchararray -->
@@ -18,20 +33,6 @@
       </row>
       <row>
         <col id="0" translatable="yes">4</col>
-      </row>
-    </data>
-  </object>
-  <object class="GtkListStore" id="model3">
-    <columns>
-      <!-- column-name gchararray -->
-      <column type="gchararray"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">Open System</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Shared Key</col>
       </row>
     </data>
   </object>
@@ -68,6 +69,10 @@
             <property name="can_focus">True</property>
             <property name="visibility">False</property>
             <property name="activates_default">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>

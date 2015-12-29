@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkAdjustment" id="bridge_ageing_time_adjustment">
     <property name="upper">4294967296</property>
     <property name="step_increment">1</property>
@@ -79,9 +80,6 @@
                 <property name="can_focus">True</property>
                 <property name="model">master_connections_model</property>
                 <property name="headers_visible">False</property>
-                <child internal-child="selection">
-                  <object class="GtkTreeSelection" id="treeview-selection1"/>
-                </child>
                 <child>
                   <object class="GtkTreeViewColumn" id="master_connection_name">
                     <child>
@@ -105,7 +103,6 @@
           <object class="GtkVButtonBox" id="buttonbox1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
             <property name="spacing">10</property>
             <property name="layout_style">start</property>
             <child>
@@ -197,6 +194,10 @@
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <property name="invisible_char">●</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
       </object>
       <packing>
         <property name="left_attach">1</property>
@@ -245,6 +246,10 @@
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
             <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">bridge_forward_delay_adjustment</property>
             <property name="snap_to_ticks">True</property>
             <property name="numeric">True</property>
@@ -288,6 +293,10 @@
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
             <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">bridge_hello_time_adjustment</property>
             <property name="snap_to_ticks">True</property>
             <property name="numeric">True</property>
@@ -342,6 +351,10 @@
         <property name="can_focus">True</property>
         <property name="invisible_char">●</property>
         <property name="invisible_char_set">True</property>
+        <property name="primary_icon_activatable">False</property>
+        <property name="secondary_icon_activatable">False</property>
+        <property name="primary_icon_sensitive">True</property>
+        <property name="secondary_icon_sensitive">True</property>
         <property name="adjustment">bridge_priority_adjustment</property>
         <property name="numeric">True</property>
       </object>
@@ -378,6 +391,10 @@
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
             <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">bridge_max_age_adjustment</property>
             <property name="snap_to_ticks">True</property>
             <property name="numeric">True</property>
@@ -436,6 +453,10 @@
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
             <property name="invisible_char_set">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
             <property name="adjustment">bridge_ageing_time_adjustment</property>
             <property name="snap_to_ticks">True</property>
             <property name="numeric">True</property>
