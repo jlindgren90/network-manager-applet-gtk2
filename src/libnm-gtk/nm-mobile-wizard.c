@@ -102,6 +102,9 @@ struct NMAMobileWizard {
 	guint32 confirm_idx;
 };
 
+static gint
+forward_func (gint current_page, gpointer user_data);
+
 static void
 assistant_closed (GtkButton *button, gpointer user_data)
 {
@@ -251,7 +254,6 @@ confirm_setup (NMAMobileWizard *self)
 		gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
 		gtk_misc_set_padding (GTK_MISC (label), 0, 6);
 		gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
-		gtk_label_set_max_width_chars (GTK_LABEL (label), 60);
 		gtk_container_add (GTK_CONTAINER (alignment), label);
 		gtk_box_pack_start (GTK_BOX (vbox), alignment, FALSE, FALSE, 6);
 	}
@@ -501,7 +503,6 @@ plan_setup (NMAMobileWizard *self)
 	label = gtk_label_new (_("Warning: Selecting an incorrect plan may result in billing issues for your broadband account or may prevent connectivity.\n\nIf you are unsure of your plan please ask your provider for your plan's APN."));
 	gtk_widget_set_size_request (label, 500, -1);
 	gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
-	gtk_label_set_max_width_chars (GTK_LABEL (label), 60);
 	gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, TRUE, 0);
 	gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
 
@@ -768,7 +769,7 @@ providers_setup (NMAMobileWizard *self)
 	g_signal_connect_swapped (self->provider_unlisted_entry, "changed", G_CALLBACK (providers_update_complete), self);
 
 	alignment = gtk_alignment_new (0, 0.5, 0.66, 0);
-	gtk_widget_set_hexpand (alignment, TRUE);
+//	gtk_widget_set_hexpand (alignment, TRUE);
 	gtk_container_add (GTK_CONTAINER (alignment), self->provider_unlisted_entry);
 	gtk_grid_attach (GTK_GRID (unlisted_grid), alignment,
 	                 1, 0, 1, 1);
@@ -993,11 +994,16 @@ country_update_complete (NMAMobileWizard *self)
 static void
 country_update_continue (NMAMobileWizard *self)
 {
+	int page;
+
 	gtk_assistant_set_page_complete (GTK_ASSISTANT (self->assistant),
 	                                 self->country_page,
 	                                 TRUE);
 
-	gtk_assistant_next_page (GTK_ASSISTANT (self->assistant));
+//	gtk_assistant_next_page (GTK_ASSISTANT (self->assistant));
+	page = gtk_assistant_get_current_page (GTK_ASSISTANT (self->assistant));
+	gtk_assistant_set_current_page (GTK_ASSISTANT (self->assistant),
+	                                forward_func (page, self));
 }
 
 static gint
@@ -1355,7 +1361,6 @@ intro_setup (NMAMobileWizard *self)
 	label = gtk_label_new (_("This assistant helps you easily set up a mobile broadband connection to a cellular (3G) network."));
 	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
 	gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
-	gtk_label_set_max_width_chars (GTK_LABEL (label), 60);
 	gtk_box_pack_start (GTK_BOX (vbox), label, FALSE, TRUE, 6);
 
 	label = gtk_label_new (_("You will need the following information:"));

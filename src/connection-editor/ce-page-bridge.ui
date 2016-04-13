@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="3.4"/>
   <object class="GtkAdjustment" id="bridge_ageing_time_adjustment">
     <property name="upper">4294967296</property>
     <property name="step_increment">1</property>
@@ -102,10 +101,9 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButtonBox" id="buttonbox1">
+          <object class="GtkVButtonBox" id="buttonbox1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
             <property name="spacing">10</property>
             <property name="layout_style">start</property>
             <child>

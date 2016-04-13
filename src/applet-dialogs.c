@@ -135,7 +135,7 @@ create_info_label (const char *text, gboolean selectable)
 	label = gtk_label_new (text ? text : "");
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.0);
 	gtk_label_set_selectable (GTK_LABEL (label), selectable);
-	gtk_widget_set_hexpand (label, selectable);
+//	gtk_widget_set_hexpand (label, selectable);
 	return label;
 }
 
@@ -149,9 +149,9 @@ create_more_addresses_widget (const GPtrArray *addresses)
 
 	/* Create the expander */
 	expander = gtk_expander_new (_("More addresses"));
-	gtk_widget_set_halign (expander, GTK_ALIGN_START);
+//	gtk_widget_set_halign (expander, GTK_ALIGN_START);
 	label = gtk_expander_get_label_widget (GTK_EXPANDER (expander));
-	gtk_widget_set_margin_top (label, 2);
+//	gtk_widget_set_margin_top (label, 2);
 
 	/* Create the text view widget and add additional addresses to it */
 	text_view = gtk_text_view_new ();
@@ -1223,7 +1223,7 @@ applet_mobile_pin_dialog_start_spinner (GtkWidget *dialog, const char *text)
 
 	vbox = GTK_WIDGET (gtk_builder_get_object (builder, "spinner_vbox"));
 	gtk_container_add (GTK_CONTAINER (vbox), spinner);
-	gtk_widget_set_halign (spinner, GTK_ALIGN_FILL);
+//	gtk_widget_set_halign (spinner, GTK_ALIGN_FILL);
 	gtk_spinner_start (GTK_SPINNER (spinner));
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "progress_label"));

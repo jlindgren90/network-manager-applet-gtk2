@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.16.1 -->
 <interface>
-  <requires lib="gtk+" version="3.4"/>
   <object class="GtkVBox" id="MobilePage">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -30,7 +29,6 @@
         </child>
         <child>
           <object class="GtkTable" id="table1">
-            <property name="margin_start">12</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="n_rows">3</property>
@@ -158,7 +156,6 @@
         </child>
         <child>
           <object class="GtkTable" id="table2">
-            <property name="margin_start">12</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="n_rows">4</property>

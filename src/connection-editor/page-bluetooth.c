@@ -59,7 +59,7 @@ bluetooth_private_init (CEPageBluetooth *self)
 
 	vbox = GTK_WIDGET (gtk_builder_get_object (builder, "bluetooth_device_vbox"));
 	gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET (priv->bdaddr));
-	gtk_widget_set_halign (GTK_WIDGET (priv->bdaddr), GTK_ALIGN_FILL);
+	//gtk_widget_set_halign (GTK_WIDGET (priv->bdaddr), GTK_ALIGN_FILL);
 	gtk_widget_show_all (GTK_WIDGET (priv->bdaddr));
 
 	/* Set mnemonic widget for Device label */

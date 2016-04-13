@@ -291,46 +291,6 @@ utils_filter_editable_on_insert_text (GtkEditable *editable,
 	return count > 0;
 }
 
-/**
- * utils_override_bg_color:
- *
- * The function can be used to set background color for a widget.
- * There are functions for that in Gtk2 [1] and Gtk3 [2]. Unfortunately, they
- * have been deprecated, and moreover gtk_widget_override_background_color()
- * stopped working at some point for some Gtk themes, including the default
- * Adwaita theme.
- * [1] gtk_widget_modify_bg() or gtk_widget_modify_base()
- * [2] gtk_widget_override_background_color()
- *
- * Related links:
- * https://bugzilla.gnome.org/show_bug.cgi?id=656461
- * https://mail.gnome.org/archives/gtk-list/2015-February/msg00053.html
- */
-void
-utils_override_bg_color (GtkWidget *widget, GdkRGBA *rgba)
-{
-	GtkCssProvider *provider;
-	char *css;
-
-	provider = (GtkCssProvider *) g_object_get_data (G_OBJECT (widget), "our-css-provider");
-	if (G_UNLIKELY (!provider)) {
-		provider = gtk_css_provider_new ();
-		gtk_style_context_add_provider (gtk_widget_get_style_context (widget),
-		                                GTK_STYLE_PROVIDER (provider),
-		                                GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-		g_object_set_data_full (G_OBJECT (widget), "our-css-provider",
-		                        provider, (GDestroyNotify) g_object_unref);
-	}
-
-	if (rgba) {
-		css = g_strdup_printf ("* { background-color: %s; background-image: none; }",
-		                       gdk_rgba_to_string (rgba));
-		gtk_css_provider_load_from_data (provider, css, -1, NULL);
-		g_free (css);
-	} else
-		gtk_css_provider_load_from_data (provider, "", -1, NULL);
-}
-
 void
 utils_set_cell_background (GtkCellRenderer *cell,
                            const char *color,
@@ -375,7 +335,7 @@ widget_set_error (GtkWidget *widget)
 {
 	g_return_if_fail (GTK_IS_WIDGET (widget));
 
-	gtk_style_context_add_class (gtk_widget_get_style_context (widget), "error");
+//	gtk_style_context_add_class (gtk_widget_get_style_context (widget), "error");
 }
 
 void
@@ -383,5 +343,5 @@ widget_unset_error (GtkWidget *widget)
 {
 	g_return_if_fail (GTK_IS_WIDGET (widget));
 
-	gtk_style_context_remove_class (gtk_widget_get_style_context (widget), "error");
+//	gtk_style_context_remove_class (gtk_widget_get_style_context (widget), "error");
 }

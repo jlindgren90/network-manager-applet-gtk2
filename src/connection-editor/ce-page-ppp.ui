@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="3.4"/>
   <object class="GtkVBox" id="PppPage">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -29,7 +28,6 @@
         </child>
         <child>
           <object class="GtkVBox" id="vbox4">
-            <property name="margin_start">12</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="spacing">6</property>
@@ -134,7 +132,6 @@
         </child>
         <child>
           <object class="GtkVBox" id="vbox6">
-            <property name="margin_start">12</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="spacing">6</property>
@@ -160,7 +157,6 @@
                 </child>
                 <child>
                   <object class="GtkVBox" id="vbox8">
-                    <property name="margin_start">12</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">6</property>
@@ -290,7 +286,6 @@
         </child>
         <child>
           <object class="GtkCheckButton" id="ppp_send_echo_packets">
-            <property name="margin_start">12</property>
             <property name="label" translatable="yes">Send PPP _echo packets</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>

@@ -50,7 +50,9 @@
 
 #include "nm-version.h"
 
+#include <gdk/gdkkeysyms.h>
 #include <gtk/gtk.h>
+#include "gtk-compat.h"
 
 /*****************************************************************************/
 

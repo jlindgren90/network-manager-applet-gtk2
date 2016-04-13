@@ -87,7 +87,6 @@ gboolean utils_filter_editable_on_insert_text (GtkEditable *editable,
                                                UtilsFilterGtkEditableFunc validate_character,
                                                gpointer block_func);
 
-void utils_override_bg_color (GtkWidget *widget, GdkRGBA *rgba);
 void utils_set_cell_background (GtkCellRenderer *cell,
                                 const char *color,
                                 const char *value);

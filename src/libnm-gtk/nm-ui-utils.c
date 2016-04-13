@@ -839,7 +839,9 @@ nma_utils_setup_password_storage (GtkWidget *passwd_entry,
 	item[0] = gtk_radio_menu_item_new_with_label (group, icon_desc_table[0]);
 	group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (item[0]));
 	item[1] = gtk_radio_menu_item_new_with_label (group, icon_desc_table[1]);
+	group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (item[1]));
 	item[2] = gtk_radio_menu_item_new_with_label (group, icon_desc_table[2]);
+	group = gtk_radio_menu_item_get_group (GTK_RADIO_MENU_ITEM (item[2]));
 	if (with_not_required)
 		item[3] = gtk_radio_menu_item_new_with_label (group, icon_desc_table[3]);
 

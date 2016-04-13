@@ -78,7 +78,7 @@ wifi_private_init (CEPageWifi *self)
 
 	vbox = GTK_WIDGET (gtk_builder_get_object (builder, "wifi_bssid_vbox"));
 	gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET (priv->bssid));
-	gtk_widget_set_halign (GTK_WIDGET (priv->bssid), GTK_ALIGN_FILL);
+//	gtk_widget_set_halign (GTK_WIDGET (priv->bssid), GTK_ALIGN_FILL);
 	gtk_widget_show_all (GTK_WIDGET (priv->bssid));
 
 	/* Device MAC */
@@ -91,7 +91,7 @@ wifi_private_init (CEPageWifi *self)
 
 	vbox = GTK_WIDGET (gtk_builder_get_object (builder, "wifi_device_vbox"));
 	gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET (priv->device_combo));
-	gtk_widget_set_halign (GTK_WIDGET (priv->device_combo), GTK_ALIGN_FILL);
+//	gtk_widget_set_halign (GTK_WIDGET (priv->device_combo), GTK_ALIGN_FILL);
 	gtk_widget_show_all (GTK_WIDGET (priv->device_combo));
 
 	/* Set mnemonic widget for Device label */

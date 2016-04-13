@@ -77,7 +77,7 @@ ethernet_private_init (CEPageEthernet *self)
 
 	vbox = GTK_WIDGET (gtk_builder_get_object (builder, "ethernet_device_vbox"));
 	gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET (priv->device_combo));
-	gtk_widget_set_halign (GTK_WIDGET (priv->device_combo), GTK_ALIGN_FILL);
+//	gtk_widget_set_halign (GTK_WIDGET (priv->device_combo), GTK_ALIGN_FILL);
 	gtk_widget_show_all (GTK_WIDGET (priv->device_combo));
 
 	/* Set mnemonic widget for Device label */
