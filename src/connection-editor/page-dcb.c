@@ -102,9 +102,9 @@ uint_entries_validate (GtkBuilder *builder, const char *fmt, gint max, gboolean 
 	const char *text;
 	guint i, total = 0;
 	gboolean valid = TRUE;
-	GdkRGBA bgcolor;
+	GdkColor bgcolor;
 
-	gdk_rgba_parse (&bgcolor, "red3");
+	gdk_color_parse ("red3", &bgcolor);
 
 	for (i = 0; i < 8; i++) {
 		tmp = g_strdup_printf (fmt, i);
@@ -118,18 +118,18 @@ uint_entries_validate (GtkBuilder *builder, const char *fmt, gint max, gboolean 
 			num = strtol (text, NULL, 10);
 			if (errno || num < 0 || num > max) {
 				/* FIXME: only sets highlight color? */
-				utils_override_bg_color (GTK_WIDGET (entry), &bgcolor);
+				gtk_widget_modify_base (GTK_WIDGET (entry), GTK_STATE_NORMAL, &bgcolor);
 				valid = FALSE;
 			} else
-				utils_override_bg_color (GTK_WIDGET (entry), NULL);
+				gtk_widget_modify_base (GTK_WIDGET (entry), GTK_STATE_NORMAL, NULL);
 
 			total += (guint) num;
 			if (sum && total > 100)
-				utils_override_bg_color (GTK_WIDGET (entry), &bgcolor);
+				gtk_widget_modify_base (GTK_WIDGET (entry), GTK_STATE_NORMAL, &bgcolor);
 		}
 	}
 	if (sum && total != 100) {
-		utils_override_bg_color (GTK_WIDGET (entry), &bgcolor);
+		gtk_widget_modify_base (GTK_WIDGET (entry), GTK_STATE_NORMAL, &bgcolor);
 		valid = FALSE;
 	}
 

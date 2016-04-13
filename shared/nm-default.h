@@ -51,7 +51,9 @@
 #include "gsystem-local-alloc.h"
 #include "nm-macros-internal.h"
 
+#include <gdk/gdkkeysyms.h>
 #include <gtk/gtk.h>
+#include "gtk-compat.h"
 
 /*****************************************************************************/
 

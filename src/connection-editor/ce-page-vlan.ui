@@ -203,7 +203,7 @@
       <object class="GtkLabel" id="vlan_flags_label">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="halign">start</property>
+        <property name="xalign">0</property>
         <property name="label" translatable="yes">Flags:</property>
       </object>
       <packing>
@@ -213,7 +213,7 @@
       </packing>
     </child>
     <child>
-      <object class="GtkGrid" id="grid1">
+      <object class="GtkTable" id="grid1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="resize_mode">immediate</property>

@@ -765,7 +765,7 @@ cell_changed_cb (GtkEditable *editable,
 {
 	AddressLineInfo *info = (AddressLineInfo *) user_data;
 	char *cell_text;
-	GdkRGBA rgba;
+	GdkColor color;
 	gboolean value_valid = FALSE;
 	const char *colorname = NULL;
 
@@ -797,8 +797,8 @@ cell_changed_cb (GtkEditable *editable,
 	    && possibly_wrong_gateway (info->model, &info->iter, cell_text))
 		colorname = "yellow";
 
-	gdk_rgba_parse (&rgba, colorname);
-	utils_override_bg_color (GTK_WIDGET (editable), &rgba);
+	gdk_color_parse (colorname, &color);
+	gtk_widget_modify_base (GTK_WIDGET (editable), GTK_STATE_NORMAL, &color);
 
 	g_free (cell_text);
 	return FALSE;
