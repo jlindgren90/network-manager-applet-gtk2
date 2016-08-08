@@ -2962,7 +2962,7 @@ nma_icon_check_and_load (const char *name, NMApplet *applet)
 #include "fallback-icon.h"
 
 static void
-nma_icons_reload (NMApplet *applet, gpointer user_data)
+nma_icons_reload (NMApplet *applet)
 {
 	GError *error = NULL;
 	gs_unref_object GdkPixbufLoader *loader = NULL;
@@ -2997,13 +2997,19 @@ error:
 	g_clear_error (&error);
 }
 
+static void nma_icon_theme_changed (GtkIconTheme *icon_theme, NMApplet *applet)
+{
+	nma_icons_reload (applet);
+	applet_schedule_update_icon (applet);
+}
+
 static void nma_icons_init (NMApplet *applet)
 {
 	gboolean path_appended;
 
 	if (applet->icon_theme) {
 		g_signal_handlers_disconnect_by_func (applet->icon_theme,
-		                                      G_CALLBACK (nma_icons_reload),
+		                                      G_CALLBACK (nma_icon_theme_changed),
 		                                      applet);
 		g_object_unref (G_OBJECT (applet->icon_theme));
 	}
@@ -3023,9 +3029,9 @@ static void nma_icons_init (NMApplet *applet)
 		                   GINT_TO_POINTER (TRUE));
 	}
 
-	g_signal_connect (applet->icon_theme, "changed", G_CALLBACK (nma_icons_reload), applet);
+	g_signal_connect (applet->icon_theme, "changed", G_CALLBACK (nma_icon_theme_changed), applet);
 
-	nma_icons_reload (applet, NULL);
+	nma_icons_reload (applet);
 }
 
 static void
@@ -3053,7 +3059,7 @@ status_icon_size_changed_cb (GtkStatusIcon *icon,
 		g_warn_if_fail (size == 0);
 	}
 
-	nma_icons_reload (applet, NULL);
+	nma_icons_reload (applet);
 
 	applet_schedule_update_icon (applet);
 
