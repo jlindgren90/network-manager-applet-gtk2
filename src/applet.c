@@ -548,55 +548,62 @@ applet_new_menu_item_helper (NMConnection *connection,
 #define TITLE_TEXT_G ((double) 0x5e / 255.0 )
 #define TITLE_TEXT_B ((double) 0x5e / 255.0 )
 
-static void
-menu_item_draw_generic (GtkWidget *widget, cairo_t *cr)
+static PangoLayout *
+menu_item_create_layout (GtkWidget *widget)
 {
 	GtkWidget *label;
 	PangoFontDescription *desc;
 	PangoLayout *layout;
 	GtkStyle *style;
-	int width = 0, height = 0, owidth, oheight;
-	gdouble extraheight = 0, extrawidth = 0;
 	const char *text;
-	gdouble xpadding = 10.0;
-	gdouble ypadding = 5.0;
-	gdouble postpadding = 0.0;
 
 	label = gtk_bin_get_child (GTK_BIN (widget));
 	text = gtk_label_get_text (GTK_LABEL (label));
 
-	layout = pango_cairo_create_layout (cr);
+	layout = gtk_widget_create_pango_layout (widget, NULL);
 	style = gtk_widget_get_style (widget);
 	desc = pango_font_description_copy (style->font_desc);
 	pango_font_description_set_variant (desc, PANGO_VARIANT_SMALL_CAPS);
 	pango_font_description_set_weight (desc, PANGO_WEIGHT_SEMIBOLD);
 	pango_layout_set_font_description (layout, desc);
 	pango_layout_set_text (layout, text, -1);
-	pango_cairo_update_layout (cr, layout);
-	pango_layout_get_size (layout, &owidth, &oheight);
-	width = owidth / PANGO_SCALE;
-	height += oheight / PANGO_SCALE;
-
-	cairo_save (cr);
-
-	cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, 0.0);
-	cairo_rectangle (cr, 0, 0,
-	                 (double) (width + 2 * xpadding),
-	                 (double) (height + ypadding + postpadding));
-	cairo_fill (cr);
-
-	/* now the in-padding content */
-	cairo_translate (cr, xpadding , ypadding);
-	cairo_set_source_rgb (cr, TITLE_TEXT_R, TITLE_TEXT_G, TITLE_TEXT_B);
-	cairo_move_to (cr, extrawidth, extraheight);
-	pango_cairo_show_layout (cr, layout);
-
-	cairo_restore(cr);
 
 	pango_font_description_free (desc);
-	g_object_unref (layout);
 
-	gtk_widget_set_size_request (widget, width + 2 * xpadding, height + ypadding + postpadding);
+	return layout;
+}
+
+static void
+menu_item_size_request (GtkWidget *widget, GtkRequisition *requisition)
+{
+	PangoLayout *layout;
+	int width, height;
+	gdouble xpadding = 10.0;
+	gdouble ypadding = 5.0;
+
+	layout = menu_item_create_layout (widget);
+
+	pango_layout_get_pixel_size (layout, &width, &height);
+	requisition->width = width + 2 * xpadding;
+	requisition->height = height + ypadding;
+
+	g_object_unref (layout);
+}
+
+static void
+menu_item_draw_generic (GtkWidget *widget, cairo_t *cr)
+{
+	PangoLayout *layout;
+	gdouble xpadding = 10.0;
+	gdouble ypadding = 5.0;
+
+	layout = menu_item_create_layout (widget);
+
+	cairo_translate (cr, xpadding, ypadding);
+	cairo_set_source_rgb (cr, TITLE_TEXT_R, TITLE_TEXT_G, TITLE_TEXT_B);
+	pango_cairo_show_layout (cr, layout);
+
+	g_object_unref (layout);
 }
 
 static gboolean
@@ -607,19 +614,11 @@ menu_title_item_expose (GtkWidget *widget, GdkEventExpose *event)
 
 	cr = gdk_cairo_create (gtk_widget_get_window (widget));
 
-	/* The drawing area we get is the whole menu; clip the drawing to the
-	 * event area, which should just be our menu item.
-	 */
-	cairo_rectangle (cr,
-	                 event->area.x, event->area.y,
-	                 event->area.width, event->area.height);
-	cairo_clip (cr);
-
-	/* We also need to reposition the cairo context so that (0, 0) is the
-	 * top-left of where we're supposed to start drawing.
-	 */
+	/* translate and clip to the widget area */
 	gtk_widget_get_allocation (widget, &allocation);
 	cairo_translate (cr, allocation.x, allocation.y);
+	cairo_rectangle (cr, 0, 0, allocation.width, allocation.height);
+	cairo_clip (cr);
 
 	menu_item_draw_generic (widget, cr);
 
@@ -636,8 +635,10 @@ applet_menu_item_create_device_item_helper (NMDevice *device,
 
 	item = gtk_menu_item_new_with_label (text);
 	gtk_widget_set_sensitive (item, FALSE);
-	if (!INDICATOR_ENABLED (applet))
+	if (!INDICATOR_ENABLED (applet)) {
+		g_signal_connect (item, "size-request", G_CALLBACK (menu_item_size_request), NULL);
 		g_signal_connect (item, "expose-event", G_CALLBACK (menu_title_item_expose), NULL);
+	}
 	return item;
 }
 
