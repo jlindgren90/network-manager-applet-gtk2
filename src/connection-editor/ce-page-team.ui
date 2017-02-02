@@ -369,7 +369,7 @@
         <property name="receives_default">True</property>
         <property name="use_underline">True</property>
         <property name="image">advanced_image</property>
-        <property name="label" translatable="yes">Ad_vanced...</property>
+        <property name="label" translatable="yes">Ad_vanced…</property>
       </object>
       <packing>
         <property name="left_attach">0</property>
@@ -780,7 +780,7 @@
                   <object class="GtkComboBox" id="hwaddr_policy">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="tooltip_text" translatable="yes">This  defines the policy of how hardware addresses of team device and port devices should be set during the team lifetime.</property>
+                    <property name="tooltip_text" translatable="yes">This defines the policy of how hardware addresses of team device and port devices should be set during the team lifetime.</property>
                     <property name="model">hwaddr_policy_model</property>
                     <property name="active">0</property>
                     <child>
@@ -802,7 +802,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="tooltip_text" translatable="yes">If checked, LACPDU frames are sent along the configured links periodically. If not, it acts as "speak when spoken to".</property>
+                    <property name="tooltip_text" translatable="yes">If checked, LACPDU frames are sent along the configured links periodically. If not, it acts as “speak when spoken to”.</property>
                     <property name="use_underline">True</property>
                     <property name="draw_indicator">True</property>
                   </object>
@@ -819,7 +819,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="tooltip_text" translatable="yes">Option specifies the rate at which our link partner is asked to transmit LACPDU packets. If checked, packets will be sent once  per second. Otherwise they will be sent every 30 seconds.</property>
+                    <property name="tooltip_text" translatable="yes">Option specifies the rate at which our link partner is asked to transmit LACPDU packets. If checked, packets will be sent once per second. Otherwise they will be sent every 30 seconds.</property>
                     <property name="use_underline">True</property>
                     <property name="draw_indicator">True</property>
                   </object>
@@ -1428,7 +1428,7 @@
                 <property name="column_spacing">12</property>
                 <child>
                   <object class="GtkButton" id="import_config_button">
-                    <property name="label" translatable="yes">Im_port team configuration from a file...</property>
+                    <property name="label" translatable="yes">Im_port team configuration from a file…</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
