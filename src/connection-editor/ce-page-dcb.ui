@@ -378,15 +378,15 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <items>
-                  <item id="0" translatable="yes">default</item>
-                  <item id="1">0</item>
-                  <item id="2">1</item>
-                  <item id="3">2</item>
-                  <item id="4">3</item>
-                  <item id="5">4</item>
-                  <item id="6">5</item>
-                  <item id="7">6</item>
-                  <item id="8">7</item>
+                  <item translatable="yes">default</item>
+                  <item>0</item>
+                  <item>1</item>
+                  <item>2</item>
+                  <item>3</item>
+                  <item>4</item>
+                  <item>5</item>
+                  <item>6</item>
+                  <item>7</item>
                 </items>
               </object>
               <packing>
@@ -399,15 +399,15 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <items>
-                  <item id="0" translatable="yes">default</item>
-                  <item id="1">0</item>
-                  <item id="2">1</item>
-                  <item id="3">2</item>
-                  <item id="4">3</item>
-                  <item id="5">4</item>
-                  <item id="6">5</item>
-                  <item id="7">6</item>
-                  <item id="8">7</item>
+                  <item translatable="yes">default</item>
+                  <item>0</item>
+                  <item>1</item>
+                  <item>2</item>
+                  <item>3</item>
+                  <item>4</item>
+                  <item>5</item>
+                  <item>6</item>
+                  <item>7</item>
                 </items>
               </object>
               <packing>
@@ -420,15 +420,15 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <items>
-                  <item id="0" translatable="yes">default</item>
-                  <item id="1">0</item>
-                  <item id="2">1</item>
-                  <item id="3">2</item>
-                  <item id="4">3</item>
-                  <item id="5">4</item>
-                  <item id="6">5</item>
-                  <item id="7">6</item>
-                  <item id="8">7</item>
+                  <item translatable="yes">default</item>
+                  <item>0</item>
+                  <item>1</item>
+                  <item>2</item>
+                  <item>3</item>
+                  <item>4</item>
+                  <item>5</item>
+                  <item>6</item>
+                  <item>7</item>
                 </items>
               </object>
               <packing>

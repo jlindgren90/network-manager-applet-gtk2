@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.19.0 -->
 <interface>
-  <requires lib="gtk+" version="3.4"/>
-  <object class="GtkBox" id="ProxyPage">
+  <object class="GtkVBox" id="ProxyPage">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="border_width">12</property>
-    <property name="orientation">vertical</property>
     <property name="spacing">6</property>
     <child>
-      <object class="GtkBox" id="box1">
+      <object class="GtkHBox" id="box1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">12</property>
@@ -29,10 +27,9 @@
           <object class="GtkComboBoxText" id="proxy_method">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="active_id">0</property>
             <items>
-              <item id="0" translatable="yes">None</item>
-              <item id="1" translatable="yes">Automatic</item>
+              <item translatable="yes">None</item>
+              <item translatable="yes">Automatic</item>
             </items>
           </object>
           <packing>
@@ -55,7 +52,6 @@
         <property name="can_focus">True</property>
         <property name="receives_default">False</property>
         <property name="tooltip_text" translatable="yes">Use this proxy configuration for only browser clients/schemes.</property>
-        <property name="halign">start</property>
         <property name="xalign">0.5</property>
         <property name="draw_indicator">True</property>
       </object>
@@ -66,7 +62,7 @@
       </packing>
     </child>
     <child>
-      <object class="GtkBox" id="box2">
+      <object class="GtkHBox" id="box2">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">10</property>
@@ -102,7 +98,7 @@
       </packing>
     </child>
     <child>
-      <object class="GtkBox" id="box3">
+      <object class="GtkHBox" id="box3">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">4</property>
@@ -139,17 +135,16 @@
       </packing>
     </child>
     <child>
-      <object class="GtkBox" id="box4">
+      <object class="GtkVBox" id="box4">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="vexpand">True</property>
-        <property name="orientation">vertical</property>
         <child>
           <object class="GtkScrolledWindow" id="scrolledwindow1">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="shadow_type">in</property>
-            <property name="min_content_height">100</property>
+            <property name="hscrollbar_policy">automatic</property>
+            <property name="vscrollbar_policy">automatic</property>
             <child>
               <object class="GtkTextView" id="proxy_pac_script_window">
                 <property name="visible">True</property>
@@ -165,7 +160,7 @@
         </child>
       </object>
       <packing>
-        <property name="expand">False</property>
+        <property name="expand">True</property>
         <property name="fill">True</property>
         <property name="position">4</property>
       </packing>

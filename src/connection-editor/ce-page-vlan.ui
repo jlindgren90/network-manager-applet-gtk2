@@ -64,12 +64,12 @@
       </packing>
     </child>
     <child>
-      <object class="GtkComboBoxText" id="vlan_cloned_mac_entry">
+      <object class="GtkComboBoxText" id="vlan_cloned_mac">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="has_entry">True</property>
-        <property name="active_id">0</property>
-        <child internal-child="entry">
+        <property name="entry_text_column">0</property>
+        <child internal-child="entry" id="vlan_cloned_mac_entry">
           <object class="GtkEntry">
             <property name="can_focus">True</property>
           </object>

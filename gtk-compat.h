@@ -43,4 +43,50 @@ gtk_grid_attach (GtkGrid *grid,
                       GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
 }
 
+static inline guint
+gtk_builder_add_from_resource (GtkBuilder   *builder,
+                               const gchar  *resource_path,
+                               GError      **error)
+{
+  GBytes *data;
+  guint ret;
+
+  data = g_resources_lookup_data (resource_path, 0, error);
+  if (data == NULL)
+    return 0;
+
+  ret = gtk_builder_add_from_string (builder,
+                                     g_bytes_get_data (data, NULL),
+                                     g_bytes_get_size (data),
+                                     error);
+
+  g_bytes_unref (data);
+
+  return ret;
+}
+
+static inline guint
+gtk_builder_add_objects_from_resource (GtkBuilder   *builder,
+                                       const gchar  *resource_path,
+                                       gchar       **object_ids,
+                                       GError      **error)
+{
+  GBytes *data;
+  guint ret;
+
+  data = g_resources_lookup_data (resource_path, 0, error);
+  if (data == NULL)
+    return 0;
+
+  ret = gtk_builder_add_objects_from_string (builder,
+                                             g_bytes_get_data (data, NULL),
+                                             g_bytes_get_size (data),
+                                             object_ids,
+                                             error);
+
+  g_bytes_unref (data);
+
+  return ret;
+}
+
 #endif

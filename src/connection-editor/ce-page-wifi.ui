@@ -155,9 +155,9 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="has_entry">True</property>
-        <property name="active_id">0</property>
+        <property name="entry_text_column">0</property>
         <child internal-child="entry">
-          <object class="GtkEntry">
+          <object class="GtkEntry" id="wifi_cloned_mac_entry">
             <property name="can_focus">True</property>
           </object>
         </child>

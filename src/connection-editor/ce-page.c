@@ -287,14 +287,15 @@ ce_page_setup_mac_combo (CEPage *self, GtkComboBox *combo,
 	_set_active_combo_item (combo, mac, active_mac, active_idx);
 }
 
+static const char *cloned_mac_entries[][2] = { { "preserve",  N_("Preserve") },
+                                               { "permanent", N_("Permanent") },
+                                               { "random",    N_("Random") },
+                                               { "stable",    N_("Stable") } };
+
 void
 ce_page_setup_cloned_mac_combo (GtkComboBoxText *combo, const char *current)
 {
 	GtkWidget *entry;
-	static const char *entries[][2] = { { "preserve",  N_("Preserve") },
-	                                    { "permanent", N_("Permanent") },
-	                                    { "random",    N_("Random") },
-	                                    { "stable",    N_("Stable") } };
 	int i, active = -1;
 
 	gtk_widget_set_tooltip_text (GTK_WIDGET (combo),
@@ -302,11 +303,11 @@ ce_page_setup_cloned_mac_combo (GtkComboBoxText *combo, const char *current)
 		  "the network device this connection is activated on. This feature is "
 		  "known as MAC cloning or spoofing. Example: 00:11:22:33:44:55"));
 
-	gtk_combo_box_text_remove_all (combo);
+	gtk_list_store_clear (GTK_LIST_STORE (gtk_combo_box_get_model (GTK_COMBO_BOX (combo))));
 
-	for (i = 0; i < G_N_ELEMENTS (entries); i++) {
-		gtk_combo_box_text_append (combo, entries[i][0], _(entries[i][1]));
-		if (nm_streq0 (current, entries[i][0]))
+	for (i = 0; i < G_N_ELEMENTS (cloned_mac_entries); i++) {
+		gtk_combo_box_text_append_text (combo, _(cloned_mac_entries[i][1]));
+		if (nm_streq0 (current, cloned_mac_entries[i][0]))
 			active = i;
 	}
 
@@ -322,11 +323,11 @@ ce_page_setup_cloned_mac_combo (GtkComboBoxText *combo, const char *current)
 const char *
 ce_page_cloned_mac_get (GtkComboBoxText *combo)
 {
-	const char *id;
+	int active;
 
-	id = gtk_combo_box_get_active_id (GTK_COMBO_BOX (combo));
-	if (id)
-		return id;
+	active = gtk_combo_box_get_active (GTK_COMBO_BOX (combo));
+	if (active != -1)
+		return cloned_mac_entries[active][0];
 
 	return gtk_combo_box_text_get_active_text (combo);
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.20.0 -->
 <interface>
-  <requires lib="gtk+" version="3.4"/>
   <object class="GtkAdjustment" id="adjustment1">
     <property name="upper">10000</property>
     <property name="step_increment">1</property>
@@ -42,16 +41,9 @@
       </row>
     </data>
   </object>
-  <object class="GtkGrid" id="IPTunnelPage">
+  <object class="GtkTable" id="IPTunnelPage">
     <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="margin_left">48</property>
-    <property name="margin_right">48</property>
-    <property name="margin_top">12</property>
-    <property name="margin_bottom">12</property>
-    <property name="hexpand">True</property>
-    <property name="border_width">0</property>
-    <property name="orientation">vertical</property>
+    <property name="border_width">12</property>
     <property name="row_spacing">8</property>
     <property name="column_spacing">36</property>
     <child>
@@ -63,30 +55,30 @@
       <packing>
         <property name="left_attach">0</property>
         <property name="top_attach">0</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
       <object class="GtkEntry" id="ip_tunnel_name">
         <property name="visible">True</property>
         <property name="can_focus">True</property>
-        <property name="hexpand">True</property>
       </object>
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">0</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
       <object class="GtkLabel" id="device_label">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="halign">start</property>
-        <property name="hexpand">False</property>
         <property name="label" translatable="yes">Parent device</property>
       </object>
       <packing>
         <property name="left_attach">0</property>
         <property name="top_attach">1</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
@@ -94,9 +86,9 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="has_entry">True</property>
-        <property name="active_id">0</property>
+        <property name="entry_text_column">0</property>
         <child internal-child="entry">
-          <object class="GtkEntry">
+          <object class="GtkEntry" id="ip_tunnel_parent_entry">
             <property name="can_focus">True</property>
           </object>
         </child>
@@ -104,68 +96,67 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">1</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
-      <object class="GtkLabel">
+      <object class="GtkLabel" id="mode_label">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="halign">start</property>
-        <property name="hexpand">False</property>
         <property name="label" translatable="yes">Mode</property>
       </object>
       <packing>
         <property name="left_attach">0</property>
         <property name="top_attach">2</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
-      <object class="GtkLabel">
+      <object class="GtkLabel" id="local_ip_label">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="halign">start</property>
-        <property name="hexpand">False</property>
         <property name="label" translatable="yes">Local IP</property>
       </object>
       <packing>
         <property name="left_attach">0</property>
         <property name="top_attach">3</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
-      <object class="GtkLabel">
+      <object class="GtkLabel" id="remote_ip_label">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="halign">start</property>
         <property name="label" translatable="yes">Remote IP</property>
       </object>
       <packing>
         <property name="left_attach">0</property>
         <property name="top_attach">4</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
-      <object class="GtkLabel">
+      <object class="GtkLabel" id="input_key_label">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="halign">start</property>
         <property name="label" translatable="yes">Input key</property>
       </object>
       <packing>
         <property name="left_attach">0</property>
         <property name="top_attach">5</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
-      <object class="GtkLabel">
+      <object class="GtkLabel" id="output_key_label">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="halign">start</property>
         <property name="label" translatable="yes">Output key</property>
       </object>
       <packing>
         <property name="left_attach">0</property>
         <property name="top_attach">6</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
@@ -183,6 +174,7 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">2</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
@@ -193,6 +185,7 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">3</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
@@ -203,6 +196,7 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">4</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
@@ -213,6 +207,7 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">5</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
@@ -223,6 +218,7 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">6</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
@@ -235,18 +231,19 @@
       <packing>
         <property name="left_attach">1</property>
         <property name="top_attach">7</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
     <child>
-      <object class="GtkLabel">
+      <object class="GtkLabel" id="mtu_label">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="halign">start</property>
         <property name="label" translatable="yes">MTU</property>
       </object>
       <packing>
         <property name="left_attach">0</property>
         <property name="top_attach">7</property>
+        <property name="y_options">GTK_FILL</property>
       </packing>
     </child>
   </object>

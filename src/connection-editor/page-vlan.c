@@ -84,7 +84,7 @@ vlan_private_init (CEPageVlan *self)
 
 	priv->id_entry = GTK_SPIN_BUTTON (gtk_builder_get_object (builder, "vlan_id_entry"));
 	priv->name_entry = GTK_ENTRY (gtk_builder_get_object (builder, "vlan_name_entry"));
-	priv->cloned_mac = GTK_COMBO_BOX_TEXT (gtk_builder_get_object (builder, "vlan_cloned_mac_entry"));
+	priv->cloned_mac = GTK_COMBO_BOX_TEXT (gtk_builder_get_object (builder, "vlan_cloned_mac"));
 	priv->mtu = GTK_SPIN_BUTTON (gtk_builder_get_object (builder, "vlan_mtu"));
 	priv->flag_reorder_hdr = GTK_TOGGLE_BUTTON (gtk_builder_get_object (builder, "reorder_hdr_flag"));
 	priv->flag_gvrp = GTK_TOGGLE_BUTTON (gtk_builder_get_object (builder, "gvrp_flag"));
