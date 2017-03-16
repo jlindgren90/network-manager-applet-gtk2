@@ -19,6 +19,7 @@ mkinstalldirs
 POTFILES
 stamp-*
 *.stamp
+*.dirstamp
 .deps
 .libs
 autom4te.cache
@@ -30,6 +31,7 @@ m4/gtk-doc.m4
 m4/intltool.m4
 m4/libtool.m4
 m4/lt*.m4
+test-*.log
 
 /cscope.in.out
 /cscope.out
@@ -70,3 +72,20 @@ man/*.1
 /test-driver
 **/tests/test-*.log
 **/tests/test-*.trs
+
+xml/
+html/
+gtk-doc.make
+libnma-decl-list.txt
+libnma-decl.txt
+libnma-overrides.txt
+libnma-sections.txt
+libnma-undeclared.txt
+libnma-undocumented.txt
+libnma-unused.txt
+libnma.args
+libnma.hierarchy
+libnma.interfaces
+libnma.prerequisites
+libnma.signals
+libnma.types

@@ -320,14 +320,14 @@ ce_page_setup_cloned_mac_combo (GtkComboBoxText *combo, const char *current)
 	}
 }
 
-const char *
+char *
 ce_page_cloned_mac_get (GtkComboBoxText *combo)
 {
 	int active;
 
 	active = gtk_combo_box_get_active (GTK_COMBO_BOX (combo));
 	if (active != -1)
-		return cloned_mac_entries[active][0];
+		return g_strdup (cloned_mac_entries[active][0]);
 
 	return gtk_combo_box_text_get_active_text (combo);
 }
@@ -359,10 +359,13 @@ mac_valid (const char *mac, int type, const char *property_name, GError **error)
 gboolean
 ce_page_cloned_mac_combo_valid (GtkComboBoxText *combo, int type, const char *property_name, GError **error)
 {
+	gs_free char *text = NULL;
+
 	if (gtk_combo_box_get_active (GTK_COMBO_BOX (combo)) != -1)
 		return TRUE;
 
-	return mac_valid (gtk_combo_box_text_get_active_text (combo),
+	text = gtk_combo_box_text_get_active_text (combo);
+	return mac_valid (text,
 	                  type,
 	                  property_name,
 	                  error);
