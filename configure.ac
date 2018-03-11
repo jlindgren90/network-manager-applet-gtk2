@@ -1,6 +1,13 @@
 AC_PREREQ([2.63])
+
+m4_define([nma_major_version], [1])
+m4_define([nma_minor_version], [7])
+m4_define([nma_micro_version], [0])
+m4_define([nma_version],
+          [nma_major_version.nma_minor_version.nma_micro_version])
+
 AC_INIT([nm-applet],
-        [1.4.7],
+        [nma_version],
         [https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager],
         [network-manager-applet])
 
@@ -10,6 +17,15 @@ AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz -Wno-portability])
 AM_MAINTAINER_MODE([enable])
 AM_SILENT_RULES([yes])
+
+NMA_MAJOR_VERSION=nma_major_version
+NMA_MINOR_VERSION=nma_minor_version
+NMA_MICRO_VERSION=nma_micro_version
+NMA_VERSION=nma_version
+AC_SUBST(NMA_MAJOR_VERSION)
+AC_SUBST(NMA_MINOR_VERSION)
+AC_SUBST(NMA_MICRO_VERSION)
+AC_SUBST(NMA_VERSION)
 
 dnl
 dnl Require programs
@@ -80,10 +96,10 @@ AC_ARG_WITH(libnm-gtk, AS_HELP_STRING([--without-libnm-gtk], [dont build legacy 
 if test "$with_libnm_gtk" != no; then
 	PKG_CHECK_MODULES(LIBNM_GLIB,
 			[gio-2.0 >= 2.32
-			 NetworkManager >= 1.3
-			 libnm-glib >= 1.3
-			 libnm-util >= 1.3
-			 libnm-glib-vpn >= 1.3
+			 NetworkManager >= 1.7
+			 libnm-glib >= 1.7
+			 libnm-util >= 1.7
+			 libnm-glib-vpn >= 1.7
 			 gmodule-export-2.0],
 			 :,
 			 [AC_MSG_FAILURE([$LIBNM_GLIB_PKG_ERRORS
@@ -98,8 +114,8 @@ AM_CONDITIONAL(WITH_LIBNM_GTK, test "$with_libnm_gtk" != "no")
 
 PKG_CHECK_MODULES(LIBNM, [libnm >= 1.3 gio-2.0 >= 2.32 gmodule-export-2.0])
 LIBNM_CFLAGS="$LIBNM_CFLAGS -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_32"
-LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MIN_REQUIRED=NM_VERSION_1_4"
-LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MAX_ALLOWED=NM_VERSION_1_4"
+LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MIN_REQUIRED=NM_VERSION_1_8"
+LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MAX_ALLOWED=NM_VERSION_1_8"
 
 PKG_CHECK_MODULES(LIBSECRET, [libsecret-unstable])
 
@@ -183,6 +199,7 @@ po/Makefile.in
 man/nm-applet.1
 man/nm-connection-editor.1
 org.gnome.nm-applet.gschema.xml
+src/libnma/nma-version.h
 ])
 AC_OUTPUT
 

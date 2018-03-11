@@ -27,7 +27,12 @@ TESTS =
 DISTCLEANFILES =
 
 DISTCHECK_CONFIGURE_FLAGS = \
-	--enable-more-warnings=yes
+	--disable-dependency-tracking \
+	--enable-gtk-doc \
+	--enable-introspection \
+	--enable-more-warnings=error \
+	--with-wwan \
+	--with-team
 
 man_MANS =
 
@@ -469,6 +474,7 @@ libnma_c_gen = \
 	src/libnma/nma-resources.c
 
 libnma_h_pub = \
+	src/libnma/nma-version.h \
 	src/libnma/nma-wifi-dialog.h \
 	src/libnma/nma-mobile-wizard.h \
 	src/libnma/nma-mobile-providers.h \
@@ -544,6 +550,7 @@ INTROSPECTION_GIRS += src/libnma/NMA-1.0.gir
 endif
 
 EXTRA_DIST += \
+	src/libnma/nma-version.h.in \
 	src/libnma/libnma.pc.in \
 	src/libnma/libnma.ver \
 	src/libnma/wifi.ui \
@@ -643,8 +650,6 @@ nodist_src_connection_editor_nm_connection_editor_SOURCES = \
 	$(connection_editor_c_gen)
 
 src_connection_editor_nm_connection_editor_CPPFLAGS = \
-	-DNM_VERSION_MIN_REQUIRED=NM_VERSION_1_4 \
-	-DNM_VERSION_MAX_ALLOWED=NM_VERSION_1_4 \
 	-DICONDIR=\""$(datadir)/icons"\" \
 	-DBINDIR=\""$(bindir)"\" \
 	-DSYSCONFDIR=\""$(sysconfdir)"\" \
@@ -762,8 +767,6 @@ nodist_src_nm_applet_SOURCES = \
 	$(nm_applet_c_gen)
 
 src_nm_applet_CPPFLAGS = \
-	-DNM_VERSION_MIN_REQUIRED=NM_VERSION_1_4 \
-	-DNM_VERSION_MAX_ALLOWED=NM_VERSION_1_4 \
 	-DICONDIR=\""$(datadir)/icons"\" \
 	-DBINDIR=\""$(bindir)"\" \
 	-DSYSCONFDIR=\""$(sysconfdir)"\" \
@@ -846,7 +849,8 @@ HFILE_GLOB = $(top_srcdir)/src/libnma/*.h
 CFILE_GLOB = $(top_srcdir)/src/libnma/*.c
 
 IGNORE_HFILES = \
-	nma-resources.h
+	nma-resources.h \
+	nma-version.h
 
 mkdb_ignore_c_files = \
 	nma-resources.c
