@@ -1,6 +1,6 @@
 AC_PREREQ([2.63])
 AC_INIT([nm-applet],
-        [1.4.6],
+        [1.4.7],
         [https://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager],
         [network-manager-applet])
 
@@ -138,7 +138,7 @@ dnl Check for gudev
 PKG_CHECK_MODULES(GUDEV, gudev-1.0 >= 147)
 
 dnl Jansson for team configuration editing
-AC_ARG_WITH(team, AS_HELP_STRING([--with-team], [Enable team configuration editor in libnm (default: yes)]))
+AC_ARG_WITH(team, AS_HELP_STRING([--with-team], [Enable team configuration editor (default: yes)]))
 if (test "${with_team}" == "no"); then
     AC_DEFINE(WITH_JANSSON, 0, [Define if Jansson is available])
 else
