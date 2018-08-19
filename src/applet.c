@@ -2047,8 +2047,10 @@ applet_update_menu (gpointer user_data)
 		nma_menu_show_cb (GTK_WIDGET (menu), applet);
 		nma_menu_add_separator_item (GTK_WIDGET (menu));
 		nma_context_menu_update (applet);
-	} else
+	} else {
 		nma_menu_show_cb (GTK_WIDGET (menu), applet);
+		gtk_menu_reposition (GTK_MENU (menu));
+	}
 
 out:
 	applet->update_menu_id = 0;
