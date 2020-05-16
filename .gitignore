@@ -38,6 +38,7 @@ test-*.log
 /cscope.po.out
 
 /network-manager-applet-*.tar.*
+/nm-connection-editor-*.tar.*
 /nm-connection-editor.appdata.xml
 nm-applet.conf
 nm-applet.desktop
@@ -69,6 +70,7 @@ src/applet-resources.h
 src/wireless-security/ws-resources.c
 src/wireless-security/ws-resources.h
 man/*.1
+pkg/
 
 /test-driver
 **/tests/test-*.log
