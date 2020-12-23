@@ -418,7 +418,7 @@ pkgconfig_DATA += src/libnm-gtk/libnm-gtk.pc
 
 if HAVE_INTROSPECTION
 src/libnm-gtk/NMGtk-1.0.gir: src/libnm-gtk/libnm-gtk.la
-src_libnm_gtk_NMGtk_1_0_gir_INCLUDES = NMClient-1.0 NetworkManager-1.0 Gtk-3.0
+src_libnm_gtk_NMGtk_1_0_gir_INCLUDES = NMClient-1.0 NetworkManager-1.0 Gtk-2.0
 src_libnm_gtk_NMGtk_1_0_gir_EXPORT_PACKAGES = libnm-gtk
 src_libnm_gtk_NMGtk_1_0_gir_CFLAGS = $(src_libnm_gtk_libnm_gtk_la_CFLAGS)
 src_libnm_gtk_NMGtk_1_0_gir_LIBS = src/libnm-gtk/libnm-gtk.la
@@ -542,7 +542,7 @@ pkgconfig_DATA += src/libnma/libnma.pc
 
 if HAVE_INTROSPECTION
 src/libnma/NMA-1.0.gir: src/libnma/libnma.la
-src_libnma_NMA_1_0_gir_INCLUDES = NM-1.0 Gtk-3.0
+src_libnma_NMA_1_0_gir_INCLUDES = NM-1.0 Gtk-2.0
 src_libnma_NMA_1_0_gir_EXPORT_PACKAGES = libnma
 src_libnma_NMA_1_0_gir_CFLAGS = $(src_libnma_libnma_la_CFLAGS)
 src_libnma_NMA_1_0_gir_LIBS = src/libnma/libnma.la
